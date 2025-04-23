@@ -705,6 +705,12 @@ section,
   position: relative;
   overflow: hidden;
 }
+.hero-image img {
+  max-width: 150%;
+  width: 1500px; /* o prueba con 400px o más según tu gusto */
+  height: auto;
+}
+
 
 .hero .content h2 {
   font-size: 3.5rem;
