@@ -28,38 +28,42 @@
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
+  
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Descomenta la línea inferior si también deseas usar un logo como imagen -->
         <img src="assets/img/logo.png" alt="">
         <h1 class="sitename">Portafolio Profesional</h1>
       </a>
-
+  
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="/portafolio-elmer-saint-hilare/#hero" >Inicio</a></li>
           <li><a href="/portafolio-elmer-saint-hilare/index.html#about">Sobre Mí</a></li>
           <li><a href="/portafolio-elmer-saint-hilare/#resume">Currículum</a></li>
           <li><a href="/portafolio-elmer-saint-hilare/#services">Servicios</a></li>
-          <li><a href="/portafolio-elmer-saint-hilare/portfolio-details.html" class="active">Galeria de proyectos</a></li>
+          <li><a href="/portafolio-elmer-saint-hilare/portfolio-details.html"class="active">Galeria de proyectos</a></li>
           <li><a href="/portafolio-elmer-saint-hilare/#contact">Contacto</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
+  
       <div class="header-social-links">
-        <a href="https://www.facebook.com/share/17s7sjvDC5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-facebook"></i>
-        </a>
+        <div class="header-social-links">
+          <a href="https://www.facebook.com/share/17s7sjvDC5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://www.instagram.com/elmerluis2901?igsh=MWl0Njd6cTQ3dm0yMA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/elmer-l-saint-hilare-rojo-3753b5262" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
         
-        <a href="https://www.instagram.com/elmerluis2901?igsh=MWl0Njd6cTQ3dm0yMA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-instagram"></i>
-        </a>
-        
-        <a href="https://www.linkedin.com/in/elmer-l-saint-hilare-rojo-3753b5262" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-linkedin"></i>
-        </a>
       </div>
-
+      <button id="toggle-darkmode" class="btn btn-sm btn-dark mode-toggle-btn ms-3" title="Cambiar modo">
+        <i class="bi bi-moon"></i>
+      </button>
     </div>
   </header>
 
@@ -129,27 +133,30 @@
   </main>
 
   <footer id="footer" class="footer">
+
     <div class="container">
       <div class="copyright text-center">
         <p>© <span>Derechos de Autor</span> <strong class="px-1 sitename">Elmer L. Saint-Hilare Rojo</strong> <span>Todos los derechos reservados</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/share/17s7sjvDC5/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.facebook.com/share/17s7sjvDC5/?mibextid=wwXIfr" class="social-icon" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-facebook"></i>
         </a>
-        
-        <a href="https://www.instagram.com/elmerluis2901?igsh=MWl0Njd6cTQ3dm0yMA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
+      
+        <a href="https://www.instagram.com/elmerluis2901?igsh=MWl0Njd6cTQ3dm0yMA%3D%3D&utm_source=qr" class="social-icon" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-instagram"></i>
         </a>
-        
-        <a href="https://www.linkedin.com/in/elmer-l-saint-hilare-rojo-3753b5262" target="_blank" rel="noopener noreferrer">
+      
+        <a href="https://www.linkedin.com/in/elmer-l-saint-hilare-rojo-3753b5262" class="social-icon" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-linkedin"></i>
         </a>
       </div>
+      
       <div class="credits">
         Diseñado por <a href="#">Elmer Saint-Hilare</a>
       </div>
     </div>
+  
   </footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -164,6 +171,34 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
   <script src="assets/js/main.js"></script>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle-darkmode');
+    const icon = toggleBtn.querySelector('i');
+  
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('bi-moon');
+        icon.classList.add('bi-sun');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        icon.classList.remove('bi-sun');
+        icon.classList.add('bi-moon');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  
+    // Mantener el modo en recargas
+    window.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        icon.classList.remove('bi-moon');
+        icon.classList.add('bi-sun');
+      }
+    });
+  </script>
 
 </body>
 

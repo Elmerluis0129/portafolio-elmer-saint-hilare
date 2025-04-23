@@ -1958,3 +1958,359 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+body.dark-mode {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+.dark-mode .section,
+.dark-mode .card,
+.dark-mode .service-item,
+.dark-mode .faq-item,
+.dark-mode .resume-wrapper {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+.dark-mode .btn-outline,
+.dark-mode .btn-outline-primary {
+  color: #f1f5f9;
+  border-color: #f1f5f9;
+}
+
+.dark-mode .btn-outline:hover {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+.dark-mode .navmenu ul li a,
+.dark-mode .faq-toggle,
+.dark-mode .section-title svg path {
+  color: #f1f5f9;
+}
+
+.dark-mode .header {
+  background-color: #0f172a !important;
+}
+
+.dark-mode .footer {
+  background-color: #0f172a !important;
+  color: #f1f5f9;
+}
+
+/* Texto principal en modo oscuro */
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode .lead,
+body.dark-mode .stat-label {
+  color: #f1f5f9 !important;
+}
+
+/* Textos resaltados en secciones como hero */
+body.dark-mode .hero h2,
+body.dark-mode .hero p,
+body.dark-mode .about-content h2,
+body.dark-mode .about-content .lead,
+body.dark-mode .about-content p,
+body.dark-mode .section-title p,
+body.dark-mode .services p,
+body.dark-mode .faq-content p,
+body.dark-mode .resume-wrapper p,
+body.dark-mode .contact .info-item span {
+  color: #e2e8f0 !important;
+}
+
+/* Botones alternativos */
+body.dark-mode .btn-outline {
+  color: #f1f5f9 !important;
+  border-color: #f1f5f9 !important;
+}
+body.dark-mode .btn-outline:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Enlaces del nav */
+body.dark-mode .navmenu ul li a {
+  color: #e2e8f0 !important;
+}
+body.dark-mode .navmenu ul li a.active {
+  font-weight: 600;
+}
+
+/* Otros elementos generales */
+body.dark-mode .stat-number {
+  color: #facc15 !important; /* Amarillo para contraste */
+}
+body.dark-mode .section-category,
+body.dark-mode .faq-toggle {
+  color: #cbd5e1 !important;
+}
+/* Modo oscuro para tarjetas de habilidades */
+body.dark-mode .skill-box {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Títulos dentro de las skill-box */
+body.dark-mode .skill-box h3 {
+  color: #facc15 !important; /* amarillo para destacar */
+}
+
+/* Textos y descripciones */
+body.dark-mode .skill-box p,
+body.dark-mode .skill-box .text-end {
+  color: #cbd5e1 !important;
+}
+
+/* Progreso en modo oscuro */
+body.dark-mode .progress {
+  background-color: #334155 !important;
+}
+
+body.dark-mode .progress-bar {
+  background-color: #f97316 !important; /* naranja fuerte */
+}
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0 10px;
+  border: 2px solid #1f2937;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #1f2937;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+}
+
+/* Modo oscuro */
+body.dark-mode .social-icon {
+  border-color: #cbd5e1;
+  color: #cbd5e1;
+}
+
+body.dark-mode .social-icon:hover {
+  background-color: #facc15;
+  border-color: #facc15;
+  color: #0f172a;
+}
+/* Fondo y texto principal del navbar en modo oscuro */
+body.dark-mode .header {
+  background-color: #0f172a !important;
+}
+
+body.dark-mode .logo h1,
+body.dark-mode .navmenu ul li a,
+body.dark-mode .header-social-links a i {
+  color: #f1f5f9 !important;
+}
+
+/* Activo / Hover en modo oscuro */
+body.dark-mode .navmenu ul li a.active,
+body.dark-mode .navmenu ul li a:hover {
+  color: #facc15 !important;
+  font-weight: 600;
+}
+
+/* Iconos sociales */
+body.dark-mode .header-social-links a i {
+  transition: color 0.3s ease;
+}
+
+body.dark-mode .header-social-links a:hover i {
+  color: #facc15 !important;
+}
+/* -------- MODO CLARO -------- */
+.navmenu ul li a {
+  color: #000; /* negro por defecto */
+  transition: color 0.3s ease;
+}
+
+.navmenu ul li a:hover,
+.navmenu ul li a.active {
+  color: #f97316; /* o usa #facc15 si prefieres ese tono */
+  font-weight: 600;
+}
+
+
+/* -------- MODO OSCURO -------- */
+body.dark-mode .navmenu ul li a {
+  color: #000 !important; /* negro por defecto también en oscuro */
+}
+
+body.dark-mode .navmenu ul li a:hover,
+body.dark-mode .navmenu ul li a.active {
+  color: #facc15 !important; /* amarillo al pasar el mouse o cuando esté activo */
+  font-weight: 600;
+}
+/* ==== TÍTULO del LOGO ==== */
+.logo .sitename {
+  color: #000 !important;
+  transition: color 0.3s ease;
+}
+
+.logo .sitename:hover {
+  color: #facc15 !important;
+}
+
+/* ==== ICONOS SOCIALES en el NAVBAR ==== */
+.header-social-links a i {
+  color: #000 !important;
+  font-size: 18px;
+  margin-left: 12px;
+  transition: color 0.3s ease;
+}
+
+.header-social-links a:hover i {
+  color: #facc15 !important;
+}
+
+/* ==== MODO OSCURO (también negros por defecto) ==== */
+body.dark-mode .logo .sitename {
+  color: #000 !important;
+}
+
+body.dark-mode .logo .sitename:hover {
+  color: #facc15 !important;
+}
+
+body.dark-mode .header-social-links a i {
+  color: #000 !important;
+}
+
+body.dark-mode .header-social-links a:hover i {
+  color: #facc15 !important;
+}
+.hero .hero-image .shape-1,
+.hero .hero-image .shape-2 {
+  display: none !important;
+}
+/* Corrige el color del texto 'muted' en modo oscuro */
+body.dark-mode .text-muted {
+  color: #e2e8f0 !important; /* blanco grisáceo claro */
+}
+/* === VISIBILIDAD EN MODO OSCURO === */
+
+body.dark-mode .service-info h4,
+body.dark-mode .related-services h4,
+body.dark-mode .info-item h5,
+body.dark-mode .info-item p,
+body.dark-mode .related-services .service-item h5 a,
+body.dark-mode .related-services .service-item p {
+  color: #f1f5f9 !important;
+}
+
+/* Título principal */
+body.dark-mode .page-title h1,
+body.dark-mode .page-title p {
+  color: #e2e8f0 !important;
+}
+
+/* Iconos dentro de la info */
+body.dark-mode .info-item i,
+body.dark-mode .related-services .service-item i {
+  color: #facc15 !important;
+}
+
+/* Fondo claro de tarjetas */
+body.dark-mode .service-info,
+body.dark-mode .related-services .service-item {
+  background-color: #1e293b !important;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Enlaces destacados */
+body.dark-mode .related-services .service-item h5 a:hover {
+  color: #facc15 !important;
+  text-decoration: underline;
+}
+/* Estilo para tarjetas de características (modo oscuro) */
+body.dark-mode .feature-box {
+  background-color: #1e293b !important; /* azul oscuro */
+  color: #f1f5f9 !important;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Iconos dentro de la tarjeta */
+body.dark-mode .feature-box i {
+  color: #facc15 !important;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Títulos en las tarjetas */
+body.dark-mode .feature-box h4 {
+  color: #f1f5f9 !important;
+  font-size: 1rem;
+  margin: 0;
+}
+/* Título de la sección "Otros Servicios" en modo oscuro */
+body.dark-mode .related-services h4 {
+  color: #f1f5f9 !important;
+}
+.related-services h4 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.related-services h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #f97316; /* naranja */
+  transition: width 0.3s ease;
+}
+
+.related-services h4:hover::after {
+  width: 100%;
+}
+/* Fondo del contenedor de "Otros Servicios" en modo oscuro */
+body.dark-mode .related-services {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+/* Línea animada bajo el título "Información del Servicio" */
+.service-info h4 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-info h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 2px;
+  background-color: #f97316; /* naranja elegante */
+  transition: width 0.3s ease;
+}
+
+.service-info h4:hover::after {
+  width: 100%;
+}
