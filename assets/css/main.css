@@ -12,9 +12,25 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Questrial",  sans-serif;
-  --nav-font: "Noto Sans",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, sans-serif;
+  --heading-font: "Questrial", sans-serif;
+  --nav-font: "Noto Sans", sans-serif;
+  
+  /* Colores principales */
+  --background-color: #ffffff;
+  --default-color: #0a0f14;
+  --heading-color: #0f2943;
+  --accent-color: #e87532;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  
+  /* Colores de navegación */
+  --nav-color: #0a0f14;
+  --nav-hover-color: #e87532;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #0a0f14;
+  --nav-dropdown-hover-color: #e87532;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -64,6 +80,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  scroll-behavior: smooth;
 }
 
 a {
@@ -74,7 +91,6 @@ a {
 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
 }
 
 h1,
@@ -143,7 +159,6 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  color: var(--default-color);
   background-color: var(--background-color);
   padding: 20px 0;
   transition: all 0.5s;
@@ -463,8 +478,7 @@ h6 {
   background-color: var(--background-color);
   font-size: 14px;
   padding: 40px 0;
-  position: relative;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .footer .copyright p {
@@ -1193,13 +1207,8 @@ section,
   box-shadow: 0 8px 35px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio .portfolio-card:hover .portfolio-overlay {
+.portfolio .portfolio-card:hover .share-overlay {
   opacity: 1;
-  visibility: visible;
-}
-
-.portfolio .portfolio-card:hover .portfolio-overlay .portfolio-actions {
-  transform: translateY(0);
 }
 
 .portfolio .portfolio-card .portfolio-image {
@@ -2150,7 +2159,7 @@ body.dark-mode .header-social-links a:hover i {
 
 .navmenu ul li a:hover,
 .navmenu ul li a.active {
-  color: #f97316; /* o usa #facc15 si prefieres ese tono */
+  color: #ffd8b4; /* color melocotón/mamey */
   font-weight: 600;
 }
 
@@ -2162,7 +2171,7 @@ body.dark-mode .navmenu ul li a {
 
 body.dark-mode .navmenu ul li a:hover,
 body.dark-mode .navmenu ul li a.active {
-  color: #facc15 !important; /* amarillo al pasar el mouse o cuando esté activo */
+  color: #ffd8b4 !important; /* color melocotón/mamey */
   font-weight: 600;
 }
 /* ==== TÍTULO del LOGO ==== */
@@ -2172,7 +2181,7 @@ body.dark-mode .navmenu ul li a.active {
 }
 
 .logo .sitename:hover {
-  color: #facc15 !important;
+  color: #ffd8b4 !important;
 }
 
 /* ==== ICONOS SOCIALES en el NAVBAR ==== */
@@ -2184,7 +2193,7 @@ body.dark-mode .navmenu ul li a.active {
 }
 
 .header-social-links a:hover i {
-  color: #facc15 !important;
+  color: #ffd8b4 !important;
 }
 
 /* ==== MODO OSCURO (también negros por defecto) ==== */
@@ -2193,7 +2202,7 @@ body.dark-mode .logo .sitename {
 }
 
 body.dark-mode .logo .sitename:hover {
-  color: #facc15 !important;
+  color: #ffd8b4 !important;
 }
 
 body.dark-mode .header-social-links a i {
@@ -2201,7 +2210,7 @@ body.dark-mode .header-social-links a i {
 }
 
 body.dark-mode .header-social-links a:hover i {
-  color: #facc15 !important;
+  color: #ffd8b4 !important;
 }
 .hero .hero-image .shape-1,
 .hero .hero-image .shape-2 {
@@ -2320,3 +2329,797 @@ body.dark-mode .related-services {
 .service-info h4:hover::after {
   width: 100%;
 }
+.horizontal-scroll-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: var(--bs-primary);
+  border-radius: 4px;
+}
+
+.horizontal-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+  background: var(--bs-primary-dark);
+}
+
+/* Estilos base para las tarjetas de proyectos */
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin: 1rem;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.project-card h5 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.project-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.project-card .badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  background-color: #ffd8b4;
+  color: #000000;
+  transition: all 0.2s ease;
+}
+
+.project-card .badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #ffb380;
+}
+
+/* Efectos hover para las tarjetas */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-card:hover img {
+  transform: scale(1.02);
+}
+
+/* Estilos para modo oscuro */
+body.dark-mode .project-card {
+  background-color: #1f2937;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .project-card h5 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .project-card p {
+  color: #d1d5db;
+}
+
+body.dark-mode .project-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .project-card .badge {
+  background-color: #ffd8b4;
+  color: #000000;
+}
+
+body.dark-mode .project-card .badge:hover {
+  background-color: #ffb380;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card.showing {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.project-card.hiding {
+  animation: fadeInUp 0.6s ease-out reverse;
+}
+
+/* Estilos para el botón de compartir principal */
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.share-buttons .share-btn {
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background: #fff;
+  border: 2px solid var(--primary-color);
+  color: #000;
+  font-size: 1rem;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.share-buttons .share-btn:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.share-buttons .share-btn i {
+  color: inherit;
+  font-size: 1rem;
+}
+
+/* Modo oscuro para el botón principal */
+body.dark-mode .share-buttons .share-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+body.dark-mode .share-buttons .share-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.modal-content {
+  border-radius: 1rem;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  border: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.modal.fade.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 👇 Aquí aplicamos el mismo fondo que la página en dark-mode */
+body.dark-mode .modal-content {
+  background-color: #111827; /* mismo fondo del body en dark mode */
+  color: #f1f1f1;
+}
+
+body.dark-mode .modal-header .btn-close {
+  filter: invert(1);
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.modal-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.linea-divisora {
+  height: 2px;
+  border: none;
+  background: linear-gradient(to right, #6c63ff, #00c9ff);
+  margin: 2rem 0;
+}
+
+/* Estilos para los filtros */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.filter-buttons .btn {
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn.active {
+  background-color: var(--bs-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Animaciones para las tarjetas */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Estilos para el modal en modo oscuro */
+body.dark-mode .modal-content {
+  background-color: #1f2937;
+  color: #f3f4f6;
+  border: 1px solid #374151;
+}
+
+body.dark-mode .modal-header {
+  border-bottom: 1px solid #374151;
+}
+
+body.dark-mode .modal-title {
+  color: #f3f4f6;
+}
+
+body.dark-mode .modal-body {
+  color: #e5e7eb;
+}
+
+body.dark-mode .modal-footer {
+  border-top: 1px solid #374151;
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Ajustes para el lightbox */
+.glightbox-clean .gslide-description {
+  background: #1f2937 !important;
+  color: #f3f4f6 !important;
+}
+
+.glightbox-clean .gslide-title {
+  color: #f3f4f6 !important;
+}
+
+.glightbox-clean .gslide-desc {
+  color: #e5e7eb !important;
+}
+
+/* Ajustes para el modo claro */
+.modal-content {
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
+}
+
+.modal-header {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-title {
+  color: #1f2937;
+}
+
+.modal-body {
+  color: #4b5563;
+}
+
+.modal-footer {
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Estilos para el título del proyecto en el modal */
+.glightbox-clean .gslide-title {
+  text-align: center !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  margin: 1rem 0 !important;
+  padding: 0.5rem 0 !important;
+  width: 100% !important;
+  color: #1a1a1a !important;
+}
+
+/* Ajuste para modo oscuro */
+body.dark-mode .glightbox-clean .gslide-title {
+  color: #f3f4f6 !important;
+}
+
+/* Contenedor de descripción centrado */
+.glightbox-clean .gslide-desc {
+  text-align: center !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+}
+
+/* Ajuste del contenedor de descripción */
+.glightbox-clean .gslide-description {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 2rem 1rem !important;
+}
+
+/* Animación suave al abrir el modal */
+.glightbox-open .gslide-media {
+  animation: fadeInScale 0.3s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Estilos para las tarjetas de proyecto */
+.project-card {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card-header {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-card:hover .project-actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-actions .btn {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.project-actions .btn:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+}
+
+/* Estilos para los botones de filtro */
+.filter-buttons .btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.filter-buttons .btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 216, 180, 0.2); /* Color melocotón con transparencia */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.filter-buttons .btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.filter-buttons .btn.active {
+  background-color: #ffd8b4;
+  border-color: #ffd8b4;
+  color: #000;
+  transform: scale(1.05);
+}
+
+/* Estilos para el botón de compartir */
+.share-buttons {
+  margin: 2rem 0;
+}
+
+.share-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.share-btn i {
+  margin-right: 0.5rem;
+}
+
+/* Animaciones para los tooltips */
+.tooltip {
+  transition: all 0.2s ease-in-out;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+/* Modo oscuro */
+body.dark-mode .project-actions .btn {
+  background-color: rgba(31, 41, 55, 0.9);
+  color: #fff;
+}
+
+body.dark-mode .project-actions .btn:hover {
+  background-color: rgb(31, 41, 55);
+}
+
+body.dark-mode .filter-buttons .btn.active {
+  background-color: #ffd8b4;
+  color: #000;
+}
+
+/* Animación para el filtrado */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card.showing {
+  animation: fadeInScale 0.3s ease-out forwards;
+}
+
+.project-card.hiding {
+  animation: fadeInScale 0.3s ease-out reverse forwards;
+}
+
+/* Prevenir animaciones múltiples */
+.project-card.showing,
+.project-card.hiding {
+  pointer-events: none;
+}
+
+/* Optimizar rendimiento de animaciones */
+.project-card {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Animaciones para el filtrado */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.project-card {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.project-card.showing {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.project-card.hiding {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+/* Prevenir animaciones múltiples */
+.project-card.showing,
+.project-card.hiding {
+  pointer-events: none;
+}
+
+/* Optimizar rendimiento de animaciones */
+.project-card {
+  will-change: opacity;
+}
+
+/* Animaciones para el filtrado */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+.project-card.showing {
+  animation: fadeInScale 0.3s ease-out forwards;
+  pointer-events: all;
+}
+
+.project-card.hiding {
+  animation: fadeInScale 0.3s ease-out reverse forwards;
+}
+
+/* Optimizar rendimiento de animaciones */
+.project-card {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Estilos para modales */
+.modal-content {
+  background: #fff;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.modal-title {
+  color: #333;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  color: #666;
+}
+
+.modal-body h5 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.modal-body p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.modal-footer {
+  border-top: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+/* Estilos para modo oscuro */
+body.dark-mode .modal-content {
+  background: #1f2937;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .modal-title {
+  color: #f3f4f6;
+}
+
+body.dark-mode .modal-body {
+  color: #d1d5db;
+}
+
+body.dark-mode .modal-body h5 {
+  color: #f3f4f6;
+}
+
+body.dark-mode .modal-body p {
+  color: #d1d5db;
+}
+
+body.dark-mode .modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Animación del modal */
+.modal.fade .modal-dialog {
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.modal.fade.show .modal-dialog {
+  transform: scale(1);
+}
+
+/* Estilos base para modales */
+.modal-content {
+  background: #fff;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.modal-header h5,
+.modal-header .modal-title {
+  color: #333 !important;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-body,
+.modal-body p,
+.modal-body span {
+  color: #666 !important;
+}
+
+.modal-body h3,
+.modal-body h4,
+.modal-body h5 {
+  color: #333 !important;
+  margin-bottom: 1rem;
+}
+
+.modal-footer {
+  border-top: 1px solid #eee;
+  padding: 1rem 1.5rem;
+}
+
+.glightbox-container .gslide-title {
+  color: #333 !important;
+}
+
+.glightbox-container .gslide-desc {
+  color: #666 !important;
+}
+
+/* Modo oscuro específico */
+body.dark-mode .modal-content {
+  background: #1f2937;
+}
+
+body.dark-mode .modal-header h5,
+body.dark-mode .modal-header .modal-title,
+body.dark-mode .modal-body h3,
+body.dark-mode .modal-body h4,
+body.dark-mode .modal-body h5 {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .modal-body,
+body.dark-mode .modal-body p,
+body.dark-mode .modal-body span {
+  color: #d1d5db !important;
+}
+
+body.dark-mode .glightbox-container .gslide-title {
+  color: #f3f4f6 !important;
+}
+
+body.dark-mode .glightbox-container .gslide-desc {
+  color: #d1d5db !important;
+}
+
+/* Animación del modal */
+.modal.fade .modal-dialog {
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.modal.fade.show .modal-dialog {
+  transform: scale(1);
+}
+

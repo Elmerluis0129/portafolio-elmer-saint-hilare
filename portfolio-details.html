@@ -5,23 +5,50 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Proyectos</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="Galería de proyectos web desarrollados por Elmer Saint-Hilare - Desarrollador Full Stack">
+  <meta name="keywords" content="portafolio, proyectos web, desarrollo web, React, Django, Node.js">
+
+  <!-- Preload de recursos críticos -->
+  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
+  <link rel="preload" href="assets/css/main.css" as="style">
+  <link rel="preload" href="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+  <link rel="preload" href="assets/js/main.js" as="script">
+
+  <!-- Optimización de fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans&family=Questrial&display=swap" rel="stylesheet">
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Noto+Sans&family=Questrial&display=swap" rel="stylesheet">
-
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- CDN para recursos comunes -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@8.4.5/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Lazy loading para imágenes -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach(img => imageObserver.observe(img));
+    });
+  </script>
 </head>
 
 <body class="service-details-page">
@@ -79,7 +106,30 @@
 
       <div class="title-wrapper">
         <h1>Galería de Proyectos Web</h1>
-        <p>Una muestra visual de los diferentes sistemas, catálogos, paneles y soluciones desarrolladas.</p>
+        <hr />
+
+        <p>Una muestra visual de los diferentes sistemas, catálogos, paneles y soluciones desarrolladas. Puedes darle clic para verlos mejor.</p>
+        <br>
+
+        <!-- Filtros de tecnologías -->
+        <div class="filter-buttons mb-4">
+          <button class="btn btn-outline-primary me-2 mb-2 active" data-filter="all" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver todos los proyectos">Todos</button>
+          <button class="btn btn-outline-primary me-2 mb-2" data-filter="React" data-bs-toggle="tooltip" data-bs-placement="top" title="Proyectos desarrollados con React">React</button>
+          <button class="btn btn-outline-primary me-2 mb-2" data-filter="Django" data-bs-toggle="tooltip" data-bs-placement="top" title="Proyectos desarrollados con Django">Django</button>
+          <button class="btn btn-outline-primary me-2 mb-2" data-filter="Python" data-bs-toggle="tooltip" data-bs-placement="top" title="Proyectos desarrollados con Python">Python</button>
+          <button class="btn btn-outline-primary me-2 mb-2" data-filter="Node.js" data-bs-toggle="tooltip" data-bs-placement="top" title="Proyectos desarrollados con Node.js">Node.js</button>
+          <button class="btn btn-outline-primary me-2 mb-2" data-filter="PostgreSQL" data-bs-toggle="tooltip" data-bs-placement="top" title="Proyectos que utilizan PostgreSQL">PostgreSQL</button>
+          <button class="btn btn-outline-primary me-2 mb-2" data-filter="Tailwind" data-bs-toggle="tooltip" data-bs-placement="top" title="Proyectos que utilizan Tailwind CSS">Tailwind</button>
+        </div>
+
+        <!-- Agregar botón de compartir -->
+        <div class="share-buttons text-center mb-4">
+          <button class="btn btn-outline-primary share-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Compartir portafolio">
+            <i class="bi bi-share"></i> Compartir Portafolio
+          </button>
+        </div>
+
+        <br>
         <p><small class="text-muted fst-italic">Toda la información en esta galería es de carácter demostrativo. No representa datos reales ni compromete información sensible.</small></p>
       </div>
       
@@ -91,38 +141,271 @@
         <div class="row gy-4">
 
           <div class="col-lg-12">
-            <div class="service-details-slider swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 700,
-                  "autoplay": { "delay": 4000 },
-                  "slidesPerView": 1,
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-1.jpeg" alt="Proyecto 1" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-2.jpeg" alt="Proyecto 2" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-3.jpeg" alt="Proyecto 3" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-4.jpeg" alt="Proyecto 4" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-5.jpeg" alt="Proyecto 5" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-6.jpeg" alt="Proyecto 6" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-7.jpeg" alt="Proyecto 7" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-8.jpeg" alt="Proyecto 8" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-9.jpeg" alt="Proyecto 9" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpeg" alt="Proyecto 10" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-11.jpeg" alt="Proyecto 11" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-12.jpeg" alt="Proyecto 12" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-13.jpeg" alt="Proyecto 13" class="img-fluid" loading="lazy"></div>
-                <div class="swiper-slide"><img src="assets/img/portfolio/portfolio-14.jpeg" alt="Proyecto 14" class="img-fluid" loading="lazy"></div>
+            <div class="horizontal-scroll-wrapper mt-5 mb-4">
+              <div class="project-card" data-tags="React">
+                <div class="project-card-header">
+                  <img src="./assets/img/portfolio/portfolio-1.jpeg" 
+                       alt="E-commerce con carrito" 
+                       class="img-fluid mb-2" 
+                       loading="lazy"
+                       data-description="Catálogo con productos, cupones, filtros y pagos."
+                       width="400" height="300">
+                  <div class="share-overlay">
+                    <button class="share-btn" aria-label="Compartir proyecto">
+                      <i class="bi bi-share"></i>
+                    </button>
+                  </div>
+                </div>
+                <h5>E-commerce con carrito</h5>
+                <p>Catálogo con productos, cupones, filtros y pagos.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                  <span class="badge bg-primary me-1">Django</span>
+                </div>
               </div>
-              <div class="swiper-pagination"></div>
+              
+              <div class="project-card" data-tags="Django,Python">
+                <div class="project-card-header">
+                  <img src="./assets/img/portfolio/portfolio-2.jpeg" 
+                       alt="Log In / Iniciar sección" 
+                       class="img-fluid mb-2" 
+                       loading="lazy"
+                       data-description="Sistema de autenticación seguro con validación de campos y gestión de sesiones."
+                       width="400" height="300">
+                  <div class="share-overlay">
+                    <button class="share-btn" aria-label="Compartir proyecto">
+                      <i class="bi bi-share"></i>
+                    </button>
+                  </div>
+                </div>
+                <h5>Log In / Iniciar sección</h5>
+                <p>Sistema de autenticación seguro con validación de campos y gestión de sesiones.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">Django</span>
+                  <span class="badge bg-primary me-1">Python</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="Django,React">
+                <div class="project-card-header">
+                  <img src="assets/img/portfolio/portfolio-3.jpeg" 
+                       alt="Sign Up / Registro" 
+                       class="img-fluid mb-2"
+                       loading="lazy"
+                       data-description="Formulario de registro con validaciones en tiempo real y confirmación por correo."
+                       width="400" height="300">
+                  <div class="share-overlay">
+                    <button class="share-btn" aria-label="Compartir proyecto">
+                      <i class="bi bi-share"></i>
+                    </button>
+                  </div>
+                </div>
+                <h5>Sign Up / Registro</h5>
+                <p>Formulario de registro con validaciones en tiempo real y confirmación por correo.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">Django</span>
+                  <span class="badge bg-primary me-1">React</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="Django,PostgreSQL">
+                <img src="assets/img/portfolio/portfolio-4.jpeg" 
+                     alt="Dashboard - Seguimiento de Préstamos" 
+                     class="img-fluid mb-2"
+                     data-description="Registro, búsqueda y edición de préstamos de equipos.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Dashboard - Seguimiento de Préstamos</h5>
+                <p>Registro, búsqueda y edición de préstamos de equipos.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">Django</span>
+                  <span class="badge bg-primary me-1">PostgreSQL</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="React,Node.js">
+                <img src="assets/img/portfolio/portfolio-5.jpeg" 
+                     alt="Préstamo - Seguimiento de Préstamos" 
+                     class="img-fluid mb-2"
+                     data-description="Registro, búsqueda y edición de préstamos de equipos.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Préstamo - Seguimiento de Préstamos</h5>
+                <p>Registro, búsqueda y edición de préstamos de equipos.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                  <span class="badge bg-primary me-1">Node.js</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="React">
+                <img src="assets/img/portfolio/portfolio-6.jpeg" 
+                     alt="Dashboard Administrativo" 
+                     class="img-fluid mb-2"
+                     data-description="Gestión de productos, órdenes y clientes.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Dashboard Administrativo</h5>
+                <p>Gestión de productos, órdenes y clientes.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="React,Tailwind">
+                <img src="assets/img/portfolio/portfolio-7.jpeg" 
+                     alt="Vista de Productos" 
+                     class="img-fluid mb-2"
+                     data-description="Visualización dinámica con filtros y carrito.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Vista de Productos</h5>
+                <p>Visualización dinámica con filtros y carrito.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                  <span class="badge bg-primary me-1">Tailwind</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="React,Node.js">
+                <img src="assets/img/portfolio/portfolio-8.jpeg" 
+                     alt="Registro de Usuarios" 
+                     class="img-fluid mb-2"
+                     data-description="Formulario completo con íconos y validaciones.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Registro de Usuarios</h5>
+                <p>Formulario completo con íconos y validaciones.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                  <span class="badge bg-primary me-1">Node.js</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="React">
+                <img src="assets/img/portfolio/portfolio-9.jpeg" 
+                     alt="Formulario de Login" 
+                     class="img-fluid mb-2"
+                     data-description="Pantalla de inicio de sesión con validaciones.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Formulario de Login</h5>
+                <p>Pantalla de inicio de sesión con validaciones.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                </div>
+              </div>
+
+              <div class="project-card" data-tags="React,Node.js">
+                <img src="assets/img/portfolio/portfolio-10.jpeg" 
+                     alt="Catálogo de Suspensión" 
+                     class="img-fluid mb-2"
+                     data-description="Vista dinámica de productos con carrito y control de inventario.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Catálogo de Suspensión</h5>
+                <p>Vista dinámica de productos con carrito y control de inventario.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                  <span class="badge bg-primary me-1">Node.js</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="Node.js,React">
+                <img src="assets/img/portfolio/portfolio-11.jpeg" 
+                     alt="Facturación con PDF" 
+                     class="img-fluid mb-2"
+                     data-description="Generación automática de facturas detalladas con descarga en PDF.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Facturación con PDF</h5>
+                <p>Generación automática de facturas detalladas con descarga en PDF.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">Node.js</span>
+                  <span class="badge bg-primary me-1">React</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="Node.js,React">
+                <img src="assets/img/portfolio/portfolio-12.jpeg" 
+                     alt="Pago con Tarjeta" 
+                     class="img-fluid mb-2"
+                     data-description="Formulario de pago con validación, resumen y simulación de tarjeta.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Pago con Tarjeta</h5>
+                <p>Formulario de pago con validación, resumen y simulación de tarjeta.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                  <span class="badge bg-primary me-1">Node.js</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="Node.js,React">
+                <img src="assets/img/portfolio/portfolio-13.jpeg" 
+                     alt="Panel Administrativo" 
+                     class="img-fluid mb-2"
+                     data-description="Gestión de usuarios, permisos y productos con interfaz moderna.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Panel Administrativo</h5>
+                <p>Gestión de usuarios, permisos y productos con interfaz moderna.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                  <span class="badge bg-primary me-1">Node.js</span>
+                </div>
+              </div>
+              
+              <div class="project-card" data-tags="React">
+                <img src="assets/img/portfolio/portfolio-14.jpeg" 
+                     alt="Carrito de Compras" 
+                     class="img-fluid mb-2"
+                     data-description="Resumen completo de productos añadidos y opciones de acción.">
+                <div class="share-overlay">
+                  <button class="share-btn" aria-label="Compartir proyecto">
+                    <i class="bi bi-share"></i>
+                  </button>
+                </div>
+                <h5>Carrito de Compras</h5>
+                <p>Resumen completo de productos añadidos y opciones de acción.</p>
+                <div class="tags">
+                  <span class="badge bg-primary me-1">React</span>
+                </div>
+              </div>
+              
+              
             </div>
+            
           </div>
 
         </div>
@@ -161,42 +444,93 @@
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Scripts optimizados -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8.4.5/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  
+  <!-- Script principal -->
+  <script src="assets/js/main.js" defer></script>
 
-  <script src="assets/js/main.js"></script>
-
+  <!-- Script para filtros y animaciones -->
   <script>
-    const toggleBtn = document.getElementById('toggle-darkmode');
-    const icon = toggleBtn.querySelector('i');
-  
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-  
-      if (document.body.classList.contains('dark-mode')) {
-        icon.classList.remove('bi-moon');
-        icon.classList.add('bi-sun');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        icon.classList.remove('bi-sun');
-        icon.classList.add('bi-moon');
-        localStorage.setItem('theme', 'light');
-      }
-    });
-  
-    // Mantener el modo en recargas
-    window.addEventListener('DOMContentLoaded', () => {
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-        icon.classList.remove('bi-moon');
-        icon.classList.add('bi-sun');
-      }
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializar AOS
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+
+      // Configuración de GLightbox
+      const lightbox = GLightbox({
+        selector: '.project-card img',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true,
+        onOpen: () => {
+          if (document.body.classList.contains('dark-mode')) {
+            document.querySelector('.glightbox-container').classList.add('dark-mode');
+          }
+        },
+        elements: [
+          ...document.querySelectorAll('.project-card img').map(img => ({
+            'href': img.src,
+            'type': 'image',
+            'title': null,
+            'description': img.dataset.description,
+            'descPosition': 'bottom'
+          }))
+        ],
+        moreLength: 0,
+        slideEffect: 'fade'
+      });
+
+      // Remover títulos después de que se abra el lightbox
+      lightbox.on('slide_after', () => {
+        const titles = document.querySelectorAll('.gslide-title');
+        titles.forEach(title => title.remove());
+      });
+
+      // Funcionalidad de filtros
+      const filterButtons = document.querySelectorAll('.filter-buttons button');
+      const projectCards = document.querySelectorAll('.project-card');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remover clase active de todos los botones
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Agregar clase active al botón clickeado
+          button.classList.add('active');
+
+          const filter = button.getAttribute('data-filter');
+
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-tags').includes(filter)) {
+              card.style.display = 'block';
+              card.style.animation = 'fadeIn 0.5s ease-in-out';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Efecto hover en las tarjetas
+      projectCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'scale(1.02)';
+          card.style.transition = 'transform 0.3s ease';
+        });
+
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'scale(1)';
+        });
+      });
     });
   </script>
 
