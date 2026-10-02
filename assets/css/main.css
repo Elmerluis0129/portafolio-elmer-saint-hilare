@@ -3271,3 +3271,113 @@ body.dark-mode .filter-buttons .btn.active {
   color: #fff;
 }
 
+/* Tarjetas del modo oscuro: azul profundo, texto claro */
+body.dark-mode {
+  --surface-color: #16315c;
+  --heading-color: #f8fafc;
+  --default-color: #e2e8f0;
+  --accent-color: #60a5fa;
+  background-color: #0b1220;
+}
+
+body.dark-mode .section,
+body.dark-mode .light-background {
+  background-color: #0b1220 !important;
+}
+
+body.dark-mode .about .personal-info,
+body.dark-mode .skill-group,
+body.dark-mode .work-card,
+body.dark-mode .service-item,
+body.dark-mode .faq-item,
+body.dark-mode .contact-form,
+body.dark-mode .project-card,
+body.dark-mode .card {
+  background: #16315c !important;
+  background-color: #16315c !important;
+  color: #f8fafc !important;
+  border: 1px solid #3b82f6 !important;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.28);
+}
+
+body.dark-mode .about .personal-info {
+  background: linear-gradient(160deg, #1d4ed8 0%, #1e3a8a 70%) !important;
+  border-color: #93c5fd !important;
+}
+
+body.dark-mode .about .personal-info .label,
+body.dark-mode .about .personal-info .info-item .label {
+  color: #dbeafe !important;
+}
+
+body.dark-mode .about .personal-info .value,
+body.dark-mode .about .personal-info .info-item .value,
+body.dark-mode .skill-group h3,
+body.dark-mode .work-card h3,
+body.dark-mode .work-card p,
+body.dark-mode .service-item h3,
+body.dark-mode .service-item p,
+body.dark-mode .faq-item h3,
+body.dark-mode .faq-content p,
+body.dark-mode .project-card h5,
+body.dark-mode .project-card p,
+body.dark-mode .contact-form,
+body.dark-mode .contact-form .form-label,
+body.dark-mode .resume-wrapper h2,
+body.dark-mode .resume-wrapper h3,
+body.dark-mode .resume-wrapper h4,
+body.dark-mode .resume-wrapper p,
+body.dark-mode .resume-wrapper li {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .skill-tags span,
+body.dark-mode .hero-kicker,
+body.dark-mode .project-card .badge {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #60a5fa;
+}
+
+body.dark-mode .faq-item.faq-active {
+  background: #1e40af !important;
+  border-color: #93c5fd !important;
+}
+
+body.dark-mode .faq-item.faq-active h3,
+body.dark-mode .service-item i,
+body.dark-mode .contact .info-item i {
+  color: #bfdbfe !important;
+}
+
+body.dark-mode .contact-form .form-control,
+body.dark-mode .contact-form textarea,
+body.dark-mode .form-control {
+  background-color: #0f1c33 !important;
+  color: #f8fafc !important;
+  border-color: #3b82f6 !important;
+}
+
+body.dark-mode .contact-form .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .header .header-container {
+  background: #ffffff !important;
+  border: none;
+}
+
+body.dark-mode .header .sitename,
+body.dark-mode .header .navmenu ul li a,
+body.dark-mode .header .header-social-links a,
+body.dark-mode .header .header-social-links a i {
+  color: #0b1220 !important;
+}
+
+body.dark-mode .header .navmenu ul li a.active,
+body.dark-mode .header .navmenu ul li a:hover,
+body.dark-mode .header .header-social-links a:hover,
+body.dark-mode .header .header-social-links a:hover i {
+  color: #1d4ed8 !important;
+}
+
