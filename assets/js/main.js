@@ -29,8 +29,12 @@
 
   function mobileNavToogle() {
     document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
+    const icon = mobileNavToggleBtn.querySelector('i');
+    const target = icon || mobileNavToggleBtn;
+    target.classList.toggle('bi-list');
+    target.classList.toggle('bi-x');
+    const expanded = document.body.classList.contains('mobile-nav-active');
+    mobileNavToggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
   }
   if (mobileNavToggleBtn) {
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
@@ -85,6 +89,7 @@
    * Animation on scroll function and init
    */
   function aosInit() {
+    if (typeof AOS === 'undefined') return;
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
@@ -97,30 +102,35 @@
   /**
    * Animate the skills items on reveal
    */
-  let skillsAnimation = document.querySelectorAll('.skills-animation');
-  skillsAnimation.forEach((item) => {
-    new Waypoint({
-      element: item,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = item.querySelectorAll('.progress .progress-bar');
-        progress.forEach(el => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%';
-        });
-      }
+  if (typeof Waypoint !== 'undefined') {
+    let skillsAnimation = document.querySelectorAll('.skills-animation');
+    skillsAnimation.forEach((item) => {
+      new Waypoint({
+        element: item,
+        offset: '80%',
+        handler: function(direction) {
+          let progress = item.querySelectorAll('.progress .progress-bar');
+          progress.forEach(el => {
+            el.style.width = el.getAttribute('aria-valuenow') + '%';
+          });
+        }
+      });
     });
-  });
+  }
 
   /**
    * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({
+      selector: '.glightbox'
+    });
+  }
 
   /**
    * Init isotope layout and filters
    */
+  if (typeof Isotope !== 'undefined' && typeof imagesLoaded !== 'undefined') {
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
@@ -150,11 +160,13 @@
     });
 
   });
+  }
 
   /**
    * Init swiper sliders
    */
   function initSwiper() {
+    if (typeof Swiper === 'undefined') return;
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
@@ -220,7 +232,9 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
   document.addEventListener('DOMContentLoaded', () => {
-    const modal = new bootstrap.Modal(document.getElementById('projectModal'));
+    const projectModalEl = document.getElementById('projectModal');
+    if (!projectModalEl) return;
+    const modal = new bootstrap.Modal(projectModalEl);
     const modalTitle = document.getElementById('projectModalLabel');
     const modalDesc = document.getElementById('projectModalDesc');
     const modalImg = document.querySelector('.modal-img');
@@ -268,19 +282,21 @@
 
   // Inicialización de componentes
   document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar AOS
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    }
 
-    // Configuración de GLightbox
-    const lightbox = GLightbox({
-      selector: '.project-card img',
-      touchNavigation: true,
-      loop: true,
-      autoplayVideos: true
-    });
+    if (typeof GLightbox !== 'undefined') {
+      GLightbox({
+        selector: '.project-card img',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+      });
+    }
 
     
 
@@ -475,4 +491,18 @@
       });
     });
   });
+
+  const contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const data = new FormData(contactForm);
+      const name = String(data.get('name') || '').trim();
+      const email = String(data.get('email') || '').trim();
+      const message = String(data.get('message') || '').trim();
+      const subject = encodeURIComponent(`Portafolio — mensaje de ${name}`);
+      const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\n${message}`);
+      window.location.href = `mailto:elmersainthilarerojo@gmail.com?subject=${subject}&body=${body}`;
+    });
+  }
 })();

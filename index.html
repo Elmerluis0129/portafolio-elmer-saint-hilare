@@ -2,763 +2,600 @@
 <html lang="es">
 
 <head>
-  <!-- Metadatos básicos para SEO y configuración de viewport -->
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portafolio - Elmer Saint-Hilare</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Elmer Saint-Hilare — Ingeniero en Sistemas</title>
+  <meta name="description" content="Portafolio de Elmer Luis Saint-Hilare Rojo, ingeniero en sistemas egresado de la UNPHU. Tesis Metro SDQ, desarrollo web, AWS y monitoreo.">
+  <meta name="keywords" content="Elmer Saint-Hilare, ingeniero en sistemas, desarrollo web, AWS, WordPress, Python, monitoreo">
 
-  <!-- Precargas de recursos críticos para mejorar el rendimiento -->
-  <link rel="preload" href="assets/css/main.css" as="style">
-  <link rel="preload" href="assets/vendor/bootstrap/css/bootstrap.min.css" as="style">
-  <link rel="preload" href="assets/js/main.js" as="script">
-  <link rel="preload" href="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
-  
-  <!-- Preconexiones a Google Fonts para optimizar la carga de fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Carga de fuentes de Google optimizada -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans:wght@400;500;700&family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Favicons para diferentes dispositivos y plataformas -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <!-- Archivos CSS de proveedores con carga optimizada -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-
-  <!-- Archivo CSS principal -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- Fallback para navegadores sin JavaScript -->
-  <noscript>
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/vendor/aos/aos.css">
-    <link rel="stylesheet" href="assets/vendor/glightbox/css/glightbox.min.css">
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-  </noscript>
 </head>
 
 <body class="index-page">
-  <!-- Header con navegación principal -->
   <header id="header" class="header d-flex align-items-center sticky-top" role="banner">
     <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-      <!-- Logo y nombre del sitio -->
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" aria-label="Ir a inicio">
-        <img src="assets/img/logo.png" alt="Logo del portafolio" width="32" height="32">
-        <h1 class="sitename">Portafolio Profesional</h1>
+        <img src="assets/img/logo.png" alt="" width="32" height="32">
+        <h1 class="sitename">Elmer Saint-Hilare</h1>
       </a>
-  
-      <!-- Menú de navegación principal -->
+
       <nav id="navmenu" class="navmenu" role="navigation" aria-label="Menú principal">
         <ul>
-          <li><a href="/portafolio-elmer-saint-hilare/#hero" class="active" aria-current="page">Inicio</a></li>
-          <li><a href="/portafolio-elmer-saint-hilare/index.html#about">Sobre Mí</a></li>
-          <li><a href="/portafolio-elmer-saint-hilare/#resume">Currículum</a></li>
-          <li><a href="/portafolio-elmer-saint-hilare/#services">Servicios</a></li>
-          <li><a href="/portafolio-elmer-saint-hilare/portfolio-details.html">Galeria de proyectos</a></li>
-          <li><a href="/portafolio-elmer-saint-hilare/#contact">Contacto</a></li>
+          <li><a href="#hero" class="active">Inicio</a></li>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#work">Proyectos</a></li>
+          <li><a href="#resume">Experiencia</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
         <button class="mobile-nav-toggle d-xl-none" aria-label="Alternar menú móvil" aria-expanded="false">
           <i class="bi bi-list" aria-hidden="true"></i>
         </button>
       </nav>
-  
-      <!-- Enlaces a redes sociales -->
+
       <div class="header-social-links" role="navigation" aria-label="Redes sociales">
-        <a href="https://www.facebook.com/share/17s7sjvDC5/?mibextid=wwXIfr" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           aria-label="Visitar Facebook">
-          <i class="bi bi-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.instagram.com/elmerluis2901?igsh=MWl0Njd6cTQ3dm0yMA%3D%3D&utm_source=qr" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           aria-label="Visitar Instagram">
-          <i class="bi bi-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/elmer-l-saint-hilare-rojo-3753b5262" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           aria-label="Visitar LinkedIn">
+        <a href="https://www.linkedin.com/in/elmer-sainthilare" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <i class="bi bi-linkedin" aria-hidden="true"></i>
         </a>
+        <a href="https://wa.me/18298517981" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/elmerluis2901" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="bi bi-instagram" aria-hidden="true"></i>
+        </a>
       </div>
-      
-      <!-- Botón de cambio de modo oscuro/claro -->
-      <button id="toggle-darkmode" 
-              class="btn btn-sm btn-dark mode-toggle-btn ms-3" 
-              aria-label="Cambiar modo oscuro/claro"
-              title="Cambiar modo">
+
+      <button id="toggle-darkmode" class="btn btn-sm btn-dark mode-toggle-btn ms-3" aria-label="Cambiar modo oscuro o claro" title="Cambiar modo">
         <i class="bi bi-moon" aria-hidden="true"></i>
       </button>
     </div>
-  </header>  
+  </header>
 
-  <!-- Contenido principal -->
   <main class="main" role="main">
-    <!-- Sección Hero - Presentación principal -->
-    <section id="hero" class="hero section" aria-label="Sección principal">
-
+    <section id="hero" class="hero section" aria-label="Presentación">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row align-items-center content">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h2>Conectando la tecnología con soluciones inteligentes</h2>
-            <p class="lead">Soy un apasionado de la programación y la inteligencia artificial, con experiencia en monitoreo de redes, soporte técnico y desarrollo web. Actualmente colaboro en proyectos vinculados a ciberseguridad y sistemas inteligentes.</p>
+            <p class="hero-kicker">Egresado · Ingeniería en Sistemas</p>
+            <h2>Desarrollo web, nube en AWS y monitoreo de sistemas</h2>
+            <p class="lead">Soy Elmer Luis Saint-Hilare Rojo, ingeniero en sistemas por la UNPHU (2025). En la tesis Metro SDQ, calificada con A, desarrollé un sistema de cobro con NFC. También mantengo aplicaciones en AWS y monitoreo infraestructura.</p>
             <div class="cta-buttons" data-aos="fade-up" data-aos-delay="300">
-              <a href="portfolio-details.html" class="btn btn-primary" role="button">Ver mis proyectos</a>
-              <a href="#contact" class="btn btn-outline" role="button">Contáctame</a>
-              <a href="assets/CV Elmer Saint-Hilare.pdf" 
-                 class="btn btn-outline" 
-                 download 
-                 role="button"
-                 aria-label="Descargar CV en PDF">Descargar CV</a>
+              <a href="#work" class="btn btn-primary">Ver proyectos</a>
+              <a href="#contact" class="btn btn-outline">Contáctame</a>
+              <a href="assets/CV Elmer Saint-Hilare.pdf" class="btn btn-outline" download>Descargar CV</a>
             </div>
-            
             <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
               <div class="stat-item">
-                <span class="stat-number" aria-label="Años de experiencia">2+</span>
-                <span class="stat-label">Años de experiencia</span>
+                <span class="stat-number">2025</span>
+                <span class="stat-label">Egresado UNPHU</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number" aria-label="Proyectos ejecutados">10+</span>
-                <span class="stat-label">Proyectos ejecutados</span>
+                <span class="stat-number">2</span>
+                <span class="stat-label">Roles actuales</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number" aria-label="Áreas de especialización">3</span>
-                <span class="stat-label">Áreas de especialización</span>
+                <span class="stat-number">B2+</span>
+                <span class="stat-label">Inglés profesional</span>
               </div>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="hero-image">
-              <img src="assets/img/profile/profile-1.png" 
-                   alt="Foto de perfil de Elmer Saint-Hilare" 
-                   class="img-fluid" 
-                   data-aos="zoom-out" 
-                   data-aos-delay="300"
-                   loading="eager"
-                   width="500"
-                   height="500">
+              <img src="assets/img/profile/profile-1.png" alt="Foto de Elmer Saint-Hilare" class="img-fluid" data-aos="zoom-out" data-aos-delay="300" width="500" height="500">
               <div class="shape-1" aria-hidden="true"></div>
               <div class="shape-2" aria-hidden="true"></div>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Sección Principal -->
-
-
-
-      <!-- Sección Acerca de -->
-      <section id="about" class="about section light-background">
-
-        <!-- Título de la sección -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Acerca de</h2>
-          <div class="title-shape">
-            <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
-            </svg>
-          </div>
-          <p>Apasionado por la tecnología, la programación y la ciberseguridad, con un fuerte compromiso por el aprendizaje continuo y la innovación.</p>
-        </div><!-- Fin del título de la sección -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row align-items-center">
-            <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
-              <div class="about-image">
-                <img src="assets/img/profile/profile-square-2.png" alt="Imagen de perfil" class="img-fluid rounded-4">
-              </div>
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-              <div class="about-content">
-                <span class="subtitle">Sobre mí</span>
-
-                <h2>Analista de Monitoreo &amp; Desarrollador Web</h2>
-
-                <p class="lead mb-4">Actualmente desempeño funciones en el área de monitoreo de transacciones y servicios de entidades financieras, supervisando la integridad de redes, servidores y puertos tanto internos como externos.</p>
-
-                <p class="mb-4">Soy estudiante de Ingeniería en Sistemas Computacionales, y complemento mis conocimientos con proyectos personales relacionados al desarrollo web, automatización y análisis de datos. También exploro el mundo de la inteligencia artificial y el hacking ético.</p>
-
-                <div class="personal-info">
-                  <div class="row g-4">
-                    <div class="col-6">
-                      <div class="info-item">
-                        <span class="label">Nombre</span>
-                        <span class="value">Elmer Luis Saint-Hilare Rojo</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="info-item">
-                        <span class="label">Teléfono</span>
-                        <span class="value">+1 (829) 851-7981</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="info-item">
-                        <span class="label">Edad</span>
-                        <span class="value">22 años</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="info-item">
-                        <span class="label">Correo</span>
-                        <span class="value">elmersainthilarerojo@gmail.com</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="info-item">
-                        <span class="label">Profesión</span>
-                        <span class="value">Est. Ing. Sistemas Computacionales</span>
-                      </div>
-                    </div>
-
-                    <div class="col-6">
-                      <div class="info-item">
-                        <span class="label">Nacionalidad</span>
-                        <span class="value">Dominicana</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="signature mt-4">
-                  <div class="signature-info">
-                    <h4>Elmer L. Saint-Hilare</h4>
-                    <p>Apasionado por la tecnología</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </section><!-- /Sección Acerca de -->
-
-
-
-      <!-- Sección de Habilidades -->
-      <section id="skills" class="skills section">
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="row g-4 skills-animation">
-
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-              <div class="skill-box">
-                <h3>HTML</h3>
-                <p>Construyo estructuras semánticas y accesibles, base para proyectos web sólidos.</p>
-                <span class="text-end d-block">95%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-              <div class="skill-box">
-                <h3>CSS / Tailwind</h3>
-                <p>Diseños modernos y responsivos, con estilos limpios y personalizados.</p>
-                <span class="text-end d-block">90%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-              <div class="skill-box">
-                <h3>JavaScript / React</h3>
-                <p>Interactividad, lógica dinámica y componentes reutilizables para SPAs eficientes.</p>
-                <span class="text-end d-block">85%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-              <div class="skill-box">
-                <h3>Python / Django</h3>
-                <p>Automatización, APIs REST y desarrollo backend limpio y escalable.</p>
-                <span class="text-end d-block">80%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="row g-4 skills-animation mt-2">
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
-              <div class="skill-box">
-                <h3>PostgreSQL</h3>
-                <p>Modelado, consultas avanzadas y administración de bases de datos relacionales.</p>
-                <span class="text-end d-block">85%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
-              <div class="skill-box">
-                <h3>Ciberseguridad</h3>
-                <p>Monitoreo de redes, análisis de vulnerabilidades y protocolos de seguridad.</p>
-                <span class="text-end d-block">75%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </section><!-- /Sección de Habilidades -->
-
-
-    <!-- Sección Currículum -->
-    <section id="resume" class="resume section">
-
-      <!-- Título de la Sección -->
+    <section id="about" class="about section light-background">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Currículum</h2>
+        <h2>Sobre mí</h2>
         <div class="title-shape">
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
           </svg>
         </div>
-        <p>Mi compromiso es transformar desafíos en soluciones funcionales y seguras.</p>
-      </div><!-- Fin del Título de la Sección -->
+        <p>Tecnología aplicada: de la interfaz al servidor, y del despliegue a la operación diaria.</p>
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          <div class="col-lg-6 position-relative" data-aos="fade-right" data-aos-delay="200">
+            <div class="about-image">
+              <img src="assets/img/profile/profile-square-2.png" alt="Elmer Saint-Hilare" class="img-fluid rounded-4">
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="about-content">
+              <span class="subtitle">Perfil</span>
+              <h2>Ingeniero en Sistemas y desarrollador full-stack</h2>
+              <p class="lead mb-4">Egresado de la Universidad Nacional Pedro Henríquez Ureña (2021–2025). En la tesis Metro SDQ, con calificación A, desarrollé un sistema web y móvil de cobro y recarga con lector NFC, panel web y app Android.</p>
+              <p class="mb-4">En Python construí una aplicación para aprender a programar, con lecciones, quizzes y gamificación, dentro de un proyecto de inteligencia artificial aplicada a la educación. En paralelo monitoreo transacciones en el sector financiero y mantengo soluciones cloud en AWS.</p>
 
-        <div class="row">
-          <div class="col-12">
-            <div class="resume-wrapper">
-              <div class="resume-block" data-aos="fade-up">
-                <h2>Experiencia Profesional</h2>
-                <p class="lead">Apasionado por la programación, la ciberseguridad y la eficiencia operativa.</p>
-
-                <div class="timeline">
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline-left">
-                      <h4 class="company">Red Nuevos Servicios Financieros</h4>
-                      <span class="period">12-12-2024 - Actualidad</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h3 class="position">Analista de Monitoreo en Red</h3>
-                      <p class="description">Encargado de monitorear transacciones de entidades financieras, reportar caídas de servicios, mantener infraestructura operativa y documentar incidentes.</p>
-                      <ul>
-                        <li>Supervisión de transacciones en tiempo real y enlaces de red internos/externos.</li>
-                        <li>Notificación de incidencias a entidades y escalamiento de fallos críticos.</li>
-                        <li>Mantenimiento de equipos tecnológicos esenciales y elaboración de reportes en plataforma interna.</li>
-                      </ul>
+              <div class="personal-info">
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Nombre</span>
+                      <span class="value">Elmer Luis Saint-Hilare Rojo</span>
                     </div>
                   </div>
-
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-left">
-                      <h4 class="company">Buenohotel, S.R.L.</h4>
-                      <span class="period">16-06-2024 - Actualidad</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h3 class="position">Desarrollador Web (100% remoto)</h3>
-                      <p class="description">Desarrollo y mantenimiento remoto de los dominios corporativos <em>www.buenohotel.com</em> y <em>www.buenohotel.com.do</em>, garantizando disponibilidad, seguridad y una experiencia alineada a la identidad de la marca.</p>
-                      <ul>
-                        <li>Desarrollo, configuración y despliegue de los sitios web en hosting dedicado con derechos reservados al cliente.</li>
-                        <li>Manejo responsable de información confidencial y de los activos digitales provistos por la contratante.</li>
-                        <li>Capacitación al personal designado sobre el uso y administración del sitio web.</li>
-                        <li>Soporte continuo y evolución del producto digital durante la vigencia del acuerdo.</li>
-                      </ul>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Título</span>
+                      <span class="value">Ing. en Sistemas Computacionales</span>
                     </div>
                   </div>
-
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-left">
-                      <h4 class="company">Palaeli Studio LLC</h4>
-                      <span class="period">21-07-2025 - 26-03-2026</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h3 class="position">Desarrollador Web - Freelance (100% remoto)</h3>
-                      <p class="description">Colaboración remota con una agencia de diseño y desarrollo web con sede en Estados Unidos, bajo un modelo orientado a resultados y entregas puntuales de tareas específicas.</p>
-                      <ul>
-                        <li>Diseño y desarrollo de sitios web a medida, con enfoque en rendimiento y experiencia de usuario.</li>
-                        <li>Mantenimiento técnico y visual de sitios existentes, corrección de errores y mejoras continuas.</li>
-                        <li>Instalación y configuración de plugins, temas y herramientas asociadas al ecosistema web.</li>
-                        <li>Apoyo técnico y creativo en tareas digitales adicionales, coordinadas vía Trello, correo y WhatsApp.</li>
-                      </ul>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Ubicación</span>
+                      <span class="value">Santo Domingo Oeste, RD</span>
                     </div>
                   </div>
-
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="timeline-left">
-                      <h4 class="company">Servicios Básicos de Seguridad</h4>
-                      <span class="period">07-02-2024 - 28-09-2024</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h3 class="position">Soporte Técnico - Departamento de Tecnología</h3>
-                      <p class="description">Responsable de brindar soporte técnico a sistemas de seguridad y equipos informáticos, así como de mantener el buen funcionamiento de la infraestructura tecnológica.</p>
-                      <ul>
-                        <li>Programación y mantenimiento de sistemas internos.</li>
-                        <li>Configuración y comunicación de dispositivos de seguridad como cámaras y alarmas.</li>
-                        <li>Soporte técnico a impresoras, laptops y otros dispositivos de oficina.</li>
-                      </ul>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Idiomas</span>
+                      <span class="value">Español · Inglés B2+</span>
                     </div>
                   </div>
-
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="timeline-left">
-                      <h4 class="company">Teleperformance (Área de Xfinity)</h4>
-                      <span class="period">10-01-2023 - 20-05-2023</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h3 class="position">Agente de Call Center</h3>
-                      <p class="description">Atención al cliente para resolución de problemas técnicos y administrativos relacionados con el servicio de Xfinity.</p>
-                      <ul>
-                        <li>Resolución de incidencias técnicas y dudas de clientes.</li>
-                        <li>Mejora de habilidades de comunicación y atención efectiva.</li>
-                        <li>Documentación precisa de cada caso en plataformas internas.</li>
-                      </ul>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Correo</span>
+                      <span class="value">elmersainthilarerojo@gmail.com</span>
                     </div>
                   </div>
-                </div>
-                
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Teléfono</span>
+                      <span class="value">+1 (829) 851-7981</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              <div class="resume-block" data-aos="fade-up" data-aos-delay="100">
-                <h2>Formación Académica</h2>
-                <p class="lead">Desarrollando habilidades técnicas, computacionales y lingüísticas para el entorno profesional moderno.</p>
-              
-                <div class="timeline">
-              
-                  <!-- Estudio Universitario -->
-                  <h3>Estudios Universitarios</h3>
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="timeline-left">
-                      <h4 class="company">Universidad Nacional Pedro Henríquez Ureña (UNPHU)</h4>
-                      <span class="period">19-09-2021 - Actualidad</span>
-                      <h4 class="position">Ingeniería en Sistemas Computacionales</h4>
-                      <p class="description">Formación en programación, redes, bases de datos, arquitectura de sistemas y ciberseguridad.</p>
-                    </div>
-                  </div>
-                  <hr>
-              
-                  <!-- Curso Técnico -->
-                   
-                  <h3>Cursos Técnicos</h3>
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="timeline-left">
-                      <h4 class="company">INFOTEP</h4>
-                      <span class="period">Fecha no especificada</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h4 class="position">Capacitación Técnica en Soporte Informático</h4>
-                      <p class="description">Manejo de herramientas de oficina, soporte técnico y habilidades para el entorno de trabajo digital.</p>
-                    </div>
-                  </div>
-                  <hr>      
-                  <!-- Certificaciones AWS -->
-                  <h3>Certificaciones</h3>
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="timeline-left">
-                      <h4 class="company">AWS Educate</h4>
-                      <span class="period">2023</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h3 class="position">Certificación: Cloud Computing & Databases</h3>
-                      <p class="description">Capacitación en fundamentos del cómputo en la nube, arquitectura AWS y gestión de bases de datos mediante comandos SQL.</p>
-                      <ul>
-                        <li><strong>Cloud Computing 101:</strong> Fundamentos del cómputo en la nube y uso de servicios de AWS.</li>
-                        <li><strong>Getting Started with Databases:</strong> Configuración de instancias y consultas SQL en AWS.</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  
-                  <!-- Inglés por Inmersión -->
-                  <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="timeline-left">
-                      <h4 class="company">Programa de Inglés por Inmersión (EIP)</h4>
-                      <span class="period">02-02-2022 - 11-12-2022</span>
-                    </div>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-right">
-                      <h4 class="position">Graduado</h4>
-                      <p class="description">Desarrollo de habilidades en comunicación oral y escrita en inglés para el ámbito profesional.</p>
-                    </div>
-                  </div>
-              
-                </div>
-              </div>
-              
-
             </div>
           </div>
         </div>
-
       </div>
-    </section><!-- /Sección Currículum -->
+    </section>
 
+    <section id="skills" class="skills section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Habilidades</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>Lo que uso para diseñar, desplegar y mantener sistemas.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="skill-group">
+              <h3>Desarrollo</h3>
+              <div class="skill-tags">
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Python</span>
+                <span>WordPress</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="skill-group">
+              <h3>Nube y datos</h3>
+              <div class="skill-tags">
+                <span>AWS</span>
+                <span>Amazon S3</span>
+                <span>CI/CD</span>
+                <span>APIs</span>
+                <span>Bases de datos</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="skill-group">
+              <h3>Operación</h3>
+              <div class="skill-tags">
+                <span>Monitoreo</span>
+                <span>Incidentes</span>
+                <span>Infraestructura</span>
+                <span>Continuidad</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="skill-group">
+              <h3>Idiomas</h3>
+              <div class="skill-tags">
+                <span>Español nativo</span>
+                <span>Inglés B2+</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="work" class="section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Proyectos</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>La tesis y el proyecto de Python van primero. La galería reúne otras interfaces.</p>
+      </div>
+      <div class="container">
+        <div class="row g-4 mb-2">
+          <div class="col-md-6" data-aos="fade-up">
+            <article class="work-card">
+              <div class="body">
+                <p class="hero-kicker">Tesis · calificación A</p>
+                <h3>Metro SDQ</h3>
+                <p>Sistema de cobro y recarga con lector NFC, panel web y aplicación Android.</p>
+                <div class="skill-tags"><span>NFC</span><span>Web</span><span>Android</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <article class="work-card">
+              <div class="body">
+                <p class="hero-kicker">Python · inteligencia artificial</p>
+                <h3>Aprender a programar</h3>
+                <p>Aplicación con lecciones, quizzes y gamificación para enseñar programación.</p>
+                <div class="skill-tags"><span>Python</span><span>Gamificación</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="row g-4 mt-1">
+          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+            <article class="work-card">
+              <img src="assets/img/portfolio/portfolio-1.jpeg" alt="Catálogo de comercio electrónico">
+              <div class="body">
+                <h3>Comercio con carrito</h3>
+                <p>Catálogo, cupones, filtros y flujo de pago.</p>
+                <div class="skill-tags"><span>React</span><span>Django</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <article class="work-card">
+              <img src="assets/img/portfolio/portfolio-4.jpeg" alt="Panel de seguimiento de préstamos">
+              <div class="body">
+                <h3>Seguimiento de préstamos</h3>
+                <p>Registro, búsqueda y edición de préstamos de equipos.</p>
+                <div class="skill-tags"><span>Django</span><span>PostgreSQL</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <article class="work-card">
+              <img src="assets/img/portfolio/portfolio-13.jpeg" alt="Panel administrativo">
+              <div class="body">
+                <h3>Panel administrativo</h3>
+                <p>Usuarios, permisos y productos en una sola vista.</p>
+                <div class="skill-tags"><span>React</span><span>Node.js</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <article class="work-card">
+              <img src="assets/img/portfolio/portfolio-11.jpeg" alt="Facturación en PDF">
+              <div class="body">
+                <h3>Facturación en PDF</h3>
+                <p>Facturas detalladas listas para descargar.</p>
+                <div class="skill-tags"><span>Node.js</span><span>React</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="portfolio-details.html" class="btn btn-primary">Abrir galería completa</a>
+        </div>
+      </div>
+    </section>
 
-      <!-- Sección de Servicios -->
+    <section id="resume" class="resume section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Experiencia</h2>
+        <div class="title-shape">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
+          </svg>
+        </div>
+        <p>Roles vigentes y el trabajo reciente que define mi perfil.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="resume-wrapper">
+          <div class="resume-block">
+            <h2>Experiencia laboral</h2>
+            <div class="timeline">
+              <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-left">
+                  <h4 class="company">Red Nuevos Servicios Financieros</h4>
+                  <span class="period">Diciembre 2024 — Presente</span>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-right">
+                  <h3 class="position">Analista de monitoreo</h3>
+                  <p class="description">Monitoreo de transacciones e infraestructura: detecto irregularidades, gestiono incidentes y doy seguimiento para que los servicios sigan seguros y disponibles.</p>
+                  <ul>
+                    <li>Identificación de irregularidades en transacciones y enlaces.</li>
+                    <li>Gestión de incidentes y continuidad operativa.</li>
+                    <li>Mantenimiento preventivo y correctivo de los sistemas.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-left">
+                  <h4 class="company">BuenoHotel</h4>
+                  <span class="period">Julio 2024 — Presente</span>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-right">
+                  <h3 class="position">Desarrollador web full-stack</h3>
+                  <p class="description">Implemento y mantengo aplicaciones y soluciones cloud en AWS, con infraestructura como código, datos en Amazon S3 y entregas continuas.</p>
+                  <ul>
+                    <li>Infraestructura como código (IaC) sobre AWS.</li>
+                    <li>Pipelines de datos en Amazon S3.</li>
+                    <li>CI/CD con AWS CodeBuild, CodeDeploy y CodePipeline.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-left">
+                  <h4 class="company">Palaeli</h4>
+                  <span class="period">Julio 2025 — Agosto 2026</span>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-right">
+                  <h3 class="position">Desarrollador web full-stack en WordPress</h3>
+                  <p class="description">Desarrollo y mantenimiento de sitios en WordPress: temas, plugins, diseño, UX y corrección de problemas técnicos.</p>
+                  <ul>
+                    <li>Personalización de temas y plugins.</li>
+                    <li>Mejoras de diseño, funcionalidad y UX/UI.</li>
+                    <li>Optimización, mantenimiento y adaptación responsive.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-block" data-aos="fade-up">
+            <h2>Formación</h2>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <h4 class="company">Universidad Nacional Pedro Henríquez Ureña</h4>
+                  <span class="period">2021 — 2025</span>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-right">
+                  <h3 class="position">Ingeniería en Sistemas Computacionales</h3>
+                  <p class="description">Egresado. Tesis Metro SDQ, calificación A: sistema web y móvil de cobro y recarga con lector NFC.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <h4 class="company">UNAPEC</h4>
+                  <span class="period">2024</span>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-right">
+                  <h3 class="position">Inglés por inmersión</h3>
+                  <p class="description">Programa de inmersión. Inglés profesional en nivel B2+.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-left">
+                  <h4 class="company">INFOTEP</h4>
+                  <span class="period">Capacitación técnica</span>
+                </div>
+                <div class="timeline-dot"></div>
+                <div class="timeline-right">
+                  <h3 class="position">Herramientas informáticas para el teletrabajo</h3>
+                  <p class="description">Manejo de herramientas de apoyo al trabajo remoto.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="services" class="services section">
-
-      <!-- Título de la Sección -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Servicios</h2>
         <div class="title-shape">
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
           </svg>
         </div>
-        <p>¿Quién tiene derecho a disfrutar sin sufrir consecuencias dolorosas que impidan ese placer?</p>
-      </div><!-- Fin del Título de la Sección -->
-
+        <p>Puedo acompañar un producto desde la interfaz hasta el despliegue y su operación.</p>
+      </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row align-items-center">
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <h2 class="fw-bold mb-4 servies-title">Excelencia en cada proyecto con soluciones creativas</h2>
-            <p class="mb-4">Diseños adaptativos, funcionalidad moderna y estrategias centradas en el usuario para tu presencia digital.</p>
-            <a href="/portafolio-elmer-saint-hilare/service-details.html" class="btn btn-outline-primary">Ver todos los servicios</a>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-item">
+              <i class="bi bi-window-sidebar icon"></i>
+              <h3>Desarrollo web</h3>
+              <p>Sitios y aplicaciones full-stack, incluidos proyectos en WordPress con temas, plugins y una interfaz clara.</p>
+            </div>
           </div>
-          <div class="col-lg-8">
-            <div class="row g-4">
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="service-item">
-                  <i class="bi bi-activity icon"></i>
-                  <h3><a href="service-details.html">Diseño y Desarrollo Web</a></h3>
-                  <p>He creado múltiples sitios web, incluyendo un catálogo interactivo con Express, SQLite y React, y sistemas web con Django y React, todos orientados a una experiencia fluida y funcional.</p>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="service-item">
-                  <i class="bi bi-easel icon"></i>
-                  <h3><a href="service-details.html">Soluciones Administrativas</a></h3>
-                  <p>Desde paneles de administración hasta módulos de gestión de inventario, órdenes, pagos, reparaciones y rutas de transporte, todos personalizados para optimizar flujos internos.</p>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-item">
-                  <i class="bi bi-broadcast icon"></i>
-                  <h3><a href="service-details.html">Proyectos con Inteligencia Artificial</a></h3>
-                  <p>Desarrollé un proyecto de gamificación educativa con IA en Python, disponible en GitHub, donde integré lógica de aprendizaje automático para una experiencia personalizada.</p>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="service-item">
-                  <i class="bi bi-bounding-box-circles icon"></i>
-                  <h3><a href="service-details.html">Aplicaciones Escalables</a></h3>
-                  <p>He construido módulos escalables y seguros con autenticación JWT, subida de imágenes, dashboards responsivos y exportación de facturas en PDF.</p>
-                </div>
-              </div>
-
+          <div class="col-md-6 col-lg-3">
+            <div class="service-item">
+              <i class="bi bi-cloud-check icon"></i>
+              <h3>Nube en AWS</h3>
+              <p>Aplicaciones e infraestructura como código, almacenamiento en S3 y pipelines de CI/CD.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-item">
+              <i class="bi bi-plug icon"></i>
+              <h3>APIs e integraciones</h3>
+              <p>Conexión de servicios, autenticación y flujos de datos entre frontend, backend y terceros.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-item">
+              <i class="bi bi-activity icon"></i>
+              <h3>Monitoreo</h3>
+              <p>Vigilancia de transacciones e infraestructura, gestión de incidentes y mantenimiento para que el servicio no se caiga.</p>
             </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </section><!-- /Sección de Servicios -->
-
-
-
-      <!-- Sección de Preguntas Frecuentes -->
-    <section id="faq" class="faq section">
-
-      <!-- Título de la Sección -->
+    <section id="faq" class="faq section light-background">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Preguntas Frecuentes</h2>
+        <h2>Preguntas frecuentes</h2>
         <div class="title-shape">
-          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M 0,10 C 40,0 60,20 100,10 C 140,0 160,20 200,10" fill="none" stroke="currentColor" stroke-width="2"></path>
           </svg>
         </div>
-        <p>Respuestas a inquietudes comunes sobre mi trabajo, procesos y experiencia.</p>
-      </div><!-- Fin del Título de la Sección -->
-
+        <p>Lo más habitual antes de empezar a trabajar juntos.</p>
+      </div>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
-
+          <div class="col-lg-10">
             <div class="faq-container">
-
               <div class="faq-item faq-active">
-                <h3>¿Cuáles son tus áreas de especialización?</h3>
+                <h3>¿En qué te especializas ahora?</h3>
                 <div class="faq-content">
-                  <p>Me especializo en desarrollo web con React, Django y Express. También tengo experiencia en automatización con Python y proyectos de inteligencia artificial aplicada a la educación.</p>
+                  <p>En desarrollo con JavaScript, React y WordPress, integraciones de APIs, nube en AWS y monitoreo. La tesis Metro SDQ fue un sistema de cobro con NFC, y en Python hice una app educativa con gamificación.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
-
               <div class="faq-item">
-                <h3>¿Qué tipo de proyectos has realizado?</h3>
+                <h3>¿Trabajas en remoto?</h3>
                 <div class="faq-content">
-                  <p>He desarrollado sistemas de préstamos, plataformas de catálogo de productos, paneles administrativos, apps móviles integradas con backend, y un proyecto de gamificación educativa con IA disponible en GitHub.</p>
+                  <p>Sí. El desarrollo para BuenoHotel y Palaeli ha sido remoto. También puedo coordinar por correo o WhatsApp.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
-
               <div class="faq-item">
-                <h3>¿Cómo puedo contactarte para trabajar juntos?</h3>
+                <h3>¿Qué idiomas manejas?</h3>
                 <div class="faq-content">
-                  <p>Solo tienes que ir a la sección de contacto, enviarme tu mensaje y me pondré en contacto contigo a la brevedad.</p>
+                  <p>Español nativo e inglés profesional (B2+), con el programa de inmersión de UNAPEC.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
-
               <div class="faq-item">
-                <h3>¿Cuáles son tus habilidades técnicas principales?</h3>
+                <h3>¿Cómo te contacto?</h3>
                 <div class="faq-content">
-                  <p>Trabajo con HTML, CSS, JavaScript, React, Tailwind, Python, Flask, Django, SQL, Git y herramientas de diseño como Photoshop y Figma.</p>
+                  <p>Por el formulario de esta página, por correo a elmersainthilarerojo@gmail.com o por WhatsApp al +1 (829) 851-7981.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>¿También puedes integrar APIs o trabajar con bases de datos?</h3>
-                <div class="faq-content">
-                  <p>Sí, tengo amplia experiencia integrando APIs REST y trabajando con bases de datos relacionales como PostgreSQL y SQLite.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-              <div class="faq-item">
-                <h3>¿Ofreces mantenimiento o soporte post-desarrollo?</h3>
-                <div class="faq-content">
-                  <p>Claro. Ofrezco mantenimiento, mejoras continuas, migración y soporte técnico para asegurar que cada proyecto siga funcionando a la perfección.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div>
-
-            </div>
-
-          </div><!-- Fin de Columna de Faq -->
-        </div>
-      </div>
-
-    </section><!-- /Sección de Preguntas Frecuentes -->
-
-
-      <!-- Sección de Contacto -->
-    <section id="contact" class="contact section light-background">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-5">
-          <div class="col-lg-6">
-            <div class="content" data-aos="fade-up" data-aos-delay="200">
-              <div class="section-category mb-3">Contacto</div>
-              <h2 class="display-5 mb-4">"Si puedes imaginarlo, puedes programarlo"</h2>
-              <p class="lead mb-4">— Alejandro Tauhoda, fundador de Programación ATS</p>
-
-
-              <div class="contact-info mt-5">
-                <div class="info-item d-flex mb-3">
-                  <i class="bi bi-envelope-at me-3"></i>
-                  <span>elmersainthilarerojo@gmail.com</span>
-                </div>
-
-                <div class="info-item d-flex mb-3">
-                  <i class="bi bi-telephone me-3"></i>
-                  <span>+1 (829) 851-7981</span>
-                </div>
-
-                <div class="info-item d-flex mb-4">
-                  <i class="bi bi-geo-alt me-3"></i>
-                  <span>Calle Reverendo Benito Blanco #29, Autopista Duarte Km 14, Santo Domingo Oeste</span>
-                </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
+    </section>
 
-    </section><!-- /Sección de Contacto -->
-
-
+    <section id="contact" class="contact section">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <div class="content">
+              <div class="section-category mb-3">Contacto</div>
+              <h2 class="mb-4">Cuéntame qué necesitas construir o mantener</h2>
+              <p class="lead mb-4">Respondo desde Santo Domingo Oeste. Si prefieres ir directo, WhatsApp y el correo llegan más rápido.</p>
+              <div class="contact-info mt-4">
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-envelope-at me-3"></i>
+                  <a href="mailto:elmersainthilarerojo@gmail.com">elmersainthilarerojo@gmail.com</a>
+                </div>
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-telephone me-3"></i>
+                  <a href="tel:+18298517981">+1 (829) 851-7981</a>
+                </div>
+                <div class="info-item d-flex mb-3">
+                  <i class="bi bi-geo-alt me-3"></i>
+                  <span>Santo Domingo Oeste, República Dominicana</span>
+                </div>
+                <div class="info-item d-flex mb-4">
+                  <i class="bi bi-linkedin me-3"></i>
+                  <a href="https://www.linkedin.com/in/elmer-sainthilare" target="_blank" rel="noopener noreferrer">linkedin.com/in/elmer-sainthilare</a>
+                </div>
+              </div>
+              <div class="contact-actions">
+                <a class="btn btn-primary" href="https://wa.me/18298517981?text=Hola%20Elmer%2C%20vi%20tu%20portafolio%20y%20quiero%20conversar." target="_blank" rel="noopener noreferrer">Escribir por WhatsApp</a>
+                <a class="btn btn-outline" href="assets/CV Elmer Saint-Hilare.pdf" download>Descargar CV</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <form id="contact-form" class="contact-form" action="mailto:elmersainthilarerojo@gmail.com" method="post" enctype="text/plain">
+              <div class="mb-3">
+                <label class="form-label" for="name">Nombre</label>
+                <input class="form-control" id="name" name="name" type="text" required autocomplete="name">
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="email">Correo</label>
+                <input class="form-control" id="email" name="email" type="email" required autocomplete="email">
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="message">Mensaje</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Enviar por correo</button>
+              <p class="mt-3 mb-0"><small>El formulario abre tu aplicación de correo con el mensaje listo para enviar.</small></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Pie de página -->
   <footer id="footer" class="footer">
-
     <div class="container">
       <div class="copyright text-center">
-        <p>© <span>Derechos de Autor</span> <strong class="px-1 sitename">Elmer L. Saint-Hilare Rojo</strong> <span>Todos los derechos reservados</span></p>
+        <p>© 2026 <strong class="px-1 sitename">Elmer Luis Saint-Hilare Rojo</strong></p>
       </div>
       <div class="social-links d-flex justify-content-center">
-        <a href="https://www.facebook.com/share/17s7sjvDC5/?mibextid=wwXIfr" class="social-icon" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-facebook"></i>
-        </a>
-      
-        <a href="https://www.instagram.com/elmerluis2901?igsh=MWl0Njd6cTQ3dm0yMA%3D%3D&utm_source=qr" class="social-icon" target="_blank" rel="noopener noreferrer">
-          <i class="bi bi-instagram"></i>
-        </a>
-      
-        <a href="https://www.linkedin.com/in/elmer-l-saint-hilare-rojo-3753b5262" class="social-icon" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/elmer-sainthilare" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <i class="bi bi-linkedin"></i>
         </a>
-      </div>
-      
-      <div class="credits">
-        Diseñado por <a href="#">Elmer Saint-Hilare</a>
+        <a href="https://wa.me/18298517981" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/elmerluis2901" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
       </div>
     </div>
-  
   </footer>
-  
 
-  <!-- Botón de scroll hacia arriba -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Volver arriba">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
-  <!-- Scripts de proveedores externos -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Script principal personalizado -->
   <script src="assets/js/main.js"></script>
 </body>
 
