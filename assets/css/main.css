@@ -3397,3 +3397,71 @@ body.dark-mode .header .header-social-links a:hover i {
   color: #1d4ed8 !important;
 }
 
+/* Experiencia y formación: cada entrada es un cuadro aparte del fondo */
+.resume .resume-wrapper .timeline::before,
+.resume .resume-wrapper .timeline .timeline-item .timeline-dot {
+  display: none;
+}
+
+.resume .resume-wrapper .timeline .timeline-item {
+  background: #ffffff;
+  border: 1px solid #d7e2f2;
+  border-left: 4px solid #1d4ed8;
+  border-radius: 16px;
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 1.15rem;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
+  gap: 0.5rem 1.25rem;
+}
+
+.resume .resume-wrapper .timeline .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.resume .resume-wrapper .timeline .timeline-item .timeline-left {
+  padding-right: 0.5rem;
+}
+
+.resume .resume-wrapper .timeline .timeline-item .timeline-right {
+  padding-left: 1.35rem;
+  margin-top: 0;
+  border-left: 1px solid #e2e8f0;
+}
+
+.resume .resume-wrapper .resume-block {
+  margin-bottom: 2.75rem;
+}
+
+@media (max-width: 992px) {
+  .resume .resume-wrapper .timeline .timeline-item .timeline-left,
+  .resume .resume-wrapper .timeline .timeline-item .timeline-right {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .resume .resume-wrapper .timeline .timeline-item .timeline-left {
+    margin-bottom: 0.75rem;
+  }
+}
+
+body.dark-mode .resume .resume-wrapper .timeline .timeline-item {
+  background: #16315c !important;
+  border-color: #3b82f6 !important;
+  border-left-color: #93c5fd !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.38);
+}
+
+body.dark-mode .resume .resume-wrapper .timeline .timeline-item .timeline-right {
+  border-left-color: rgba(147, 197, 253, 0.4);
+}
+
+body.dark-mode .resume .resume-wrapper .timeline .timeline-item .company,
+body.dark-mode .resume .resume-wrapper .timeline .timeline-item .position,
+body.dark-mode .resume .resume-wrapper .timeline .timeline-item .description {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .resume .resume-wrapper .timeline .timeline-item .period {
+  color: #93c5fd !important;
+}
+
