@@ -110,7 +110,7 @@
       const group = el.closest('.row') || el.parentElement;
       const index = pending.filter(child => (child.closest('.row') || child.parentElement) === group).indexOf(el);
       el.setAttribute('data-aos', 'fade-up');
-      if (index > 0) el.setAttribute('data-aos-delay', String(Math.min(index, 3) * 80));
+      if (index > 0) el.setAttribute('data-aos-delay', String(Math.min(index, 3) * 110));
     });
   }
 
@@ -119,7 +119,7 @@
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     markQuietReveals();
     AOS.init({
-      duration: reduce ? 0 : 520,
+      duration: reduce ? 0 : 760,
       easing: 'ease-out',
       once: true,
       mirror: false,
