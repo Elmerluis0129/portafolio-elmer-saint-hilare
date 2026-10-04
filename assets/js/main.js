@@ -88,13 +88,43 @@
   /**
    * Animation on scroll function and init
    */
+  function markQuietReveals() {
+    const selector = [
+      '.section-title',
+      '.work-card',
+      '.service-item',
+      '.timeline-item',
+      '.about-image',
+      '.about-content',
+      '.faq-container',
+      '.contact-form',
+      '.contact .col-lg-5',
+      '.hero .content > .col-lg-6'
+    ].join(',');
+
+    const pending = [...document.querySelectorAll(selector)].filter(el => {
+      return !el.hasAttribute('data-aos') && !el.closest('[data-aos]') && !el.querySelector('[data-aos]');
+    });
+
+    pending.forEach(el => {
+      const group = el.closest('.row') || el.parentElement;
+      const index = pending.filter(child => (child.closest('.row') || child.parentElement) === group).indexOf(el);
+      el.setAttribute('data-aos', 'fade-up');
+      if (index > 0) el.setAttribute('data-aos-delay', String(Math.min(index, 3) * 80));
+    });
+  }
+
   function aosInit() {
     if (typeof AOS === 'undefined') return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    markQuietReveals();
     AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
+      duration: reduce ? 0 : 520,
+      easing: 'ease-out',
       once: true,
-      mirror: false
+      mirror: false,
+      offset: 48,
+      disable: reduce
     });
   }
   window.addEventListener('load', aosInit);
