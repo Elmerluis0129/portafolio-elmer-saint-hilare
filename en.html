@@ -25,11 +25,13 @@
         <img src="assets/img/logo.png" alt="" width="32" height="32">
         <h1 class="sitename">Elmer Saint-Hilare</h1>
       </a>
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" role="navigation" aria-label="Main menu">
         <ul>
           <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#work">Work</a></li>
           <li><a href="#resume">Experience</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="index.html" lang="es">ES</a></li>
         </ul>
@@ -37,9 +39,10 @@
           <i class="bi bi-list" aria-hidden="true"></i>
         </button>
       </nav>
-      <div class="header-social-links">
+      <div class="header-social-links" role="navigation" aria-label="Social links">
         <a href="https://www.linkedin.com/in/elmer-sainthilare" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         <a href="https://wa.me/18298517981" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elmerluis2901" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
       </div>
       <button id="toggle-darkmode" class="btn btn-sm btn-dark mode-toggle-btn ms-3" aria-label="Toggle color mode">
         <i class="bi bi-moon" aria-hidden="true"></i>
@@ -80,6 +83,70 @@
               <img src="assets/img/profile/profile-1.png" alt="Elmer Saint-Hilare" class="img-fluid" width="500" height="500">
               <div class="shape-1" aria-hidden="true"></div>
               <div class="shape-2" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section light-background">
+      <div class="container section-title">
+        <h2>About</h2>
+        <p>Applied technology: from the interface to the server, and from deploy to day-to-day operations.</p>
+      </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 position-relative">
+            <div class="about-image">
+              <img src="assets/img/profile/profile-square-2.png" alt="Elmer Saint-Hilare" class="img-fluid rounded-4">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-content">
+              <span class="subtitle">Profile</span>
+              <h2>Systems engineer and full-stack developer</h2>
+              <p class="lead mb-4">I graduated in Computer Systems Engineering from UNPHU. For my thesis (Metro SDQ, grade A) I built a web and mobile payment system with NFC. In Python I built an app for learning to code, with lessons, quizzes, and gamification, as part of a project on AI for education.</p>
+              <p class="mb-4">Today I monitor transactions and infrastructure in financial services, and I maintain applications and cloud systems on AWS.</p>
+              <div class="personal-info">
+                <div class="row g-4">
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Name</span>
+                      <span class="value">Elmer Luis Saint-Hilare Rojo</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Age</span>
+                      <span class="value">23</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Location</span>
+                      <span class="value">Santo Domingo Oeste, DR</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Languages</span>
+                      <span class="value">Spanish · English B2+</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Email</span>
+                      <span class="value">elmersainthilarerojo@gmail.com</span>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="info-item">
+                      <span class="label">Phone</span>
+                      <span class="value">+1 (829) 851-7981</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -181,6 +248,45 @@
                   <p class="description">I built and maintained WordPress sites: themes, plugins, UX, performance, bug fixes, and responsive layouts. Remote work with a US design and development studio.</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section">
+      <div class="container section-title">
+        <h2>Services</h2>
+        <p>I can take a product from the interface through deployment and into daily operation.</p>
+      </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-item">
+              <i class="bi bi-window-sidebar icon"></i>
+              <h3>Web development</h3>
+              <p>Full-stack sites and apps, including WordPress projects with themes, plugins, and a clear interface.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-item">
+              <i class="bi bi-cloud-check icon"></i>
+              <h3>Cloud on AWS</h3>
+              <p>Applications and infrastructure as code, storage on S3, and CI/CD pipelines.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-item">
+              <i class="bi bi-plug icon"></i>
+              <h3>APIs and integrations</h3>
+              <p>Connecting services, authentication, and data flows between frontend, backend, and third parties.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service-item">
+              <i class="bi bi-activity icon"></i>
+              <h3>Monitoring</h3>
+              <p>Watching transactions and infrastructure, handling incidents, and maintenance so the service stays up.</p>
             </div>
           </div>
         </div>
