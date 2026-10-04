@@ -215,18 +215,21 @@
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
+    const links = Array.from(navmenulinks).filter(link => link.hash && document.querySelector(link.hash));
+    if (!links.length) return;
+
+    const probe = 140;
+    let current = links[0];
+    links.forEach(link => {
+      const top = document.querySelector(link.hash).getBoundingClientRect().top;
+      if (top <= probe) current = link;
+    });
+
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
+    if (atBottom) current = links[links.length - 1];
+
+    links.forEach(link => link.classList.remove('active'));
+    current.classList.add('active');
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
