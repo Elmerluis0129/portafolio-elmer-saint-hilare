@@ -3195,8 +3195,21 @@ body.dark-mode .glightbox-container .gslide-desc {
 }
 
 .work-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.35rem;
+  margin-bottom: 0.45rem;
+}
+
+.case-points {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+}
+
+.case-points li {
+  margin-bottom: 0.45rem;
+}
+
+.case-points strong {
+  color: var(--heading-color);
 }
 
 .work-card p {
@@ -3315,6 +3328,9 @@ body.dark-mode .about .personal-info .info-item .value,
 body.dark-mode .skill-group h3,
 body.dark-mode .work-card h3,
 body.dark-mode .work-card p,
+body.dark-mode .case-points,
+body.dark-mode .case-points li,
+body.dark-mode .case-points strong,
 body.dark-mode .service-item h3,
 body.dark-mode .service-item p,
 body.dark-mode .faq-item h3,

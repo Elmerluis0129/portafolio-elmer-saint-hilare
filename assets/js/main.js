@@ -500,9 +500,8 @@
       const name = String(data.get('name') || '').trim();
       const email = String(data.get('email') || '').trim();
       const message = String(data.get('message') || '').trim();
-      const subject = encodeURIComponent(`Portafolio — mensaje de ${name}`);
-      const body = encodeURIComponent(`Nombre: ${name}\nCorreo: ${email}\n\n${message}`);
-      window.location.href = `mailto:elmersainthilarerojo@gmail.com?subject=${subject}&body=${body}`;
+      const text = encodeURIComponent(`Hola Elmer, soy ${name} (${email}).\n\n${message}`);
+      window.open(`https://wa.me/18298517981?text=${text}`, '_blank', 'noopener,noreferrer');
     });
   }
 })();
