@@ -177,8 +177,13 @@ h6 {
 }
 
 .header .logo img {
+  width: 32px;
+  height: 32px;
   max-height: 36px;
   margin-right: 8px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
 }
 
 .header .logo h1 {
@@ -720,9 +725,12 @@ section,
   overflow: hidden;
 }
 .hero-image img {
-  max-width: 150%;
-  width: 1500px; /* o prueba con 400px o más según tu gusto */
-  height: auto;
+  width: 100%;
+  max-width: 440px;
+  height: 540px;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: 28px;
 }
 
 
@@ -901,6 +909,8 @@ section,
 }
 
 .about .about-image img {
+  width: 100%;
+  height: auto;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
