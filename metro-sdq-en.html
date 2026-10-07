@@ -97,16 +97,6 @@
               </div>
             </div>
 
-            <div class="case-study-panel mt-4">
-              <h3>Safe demo approach</h3>
-              <p class="mb-3">I do not embed the admin panel in an iframe. That avoids leaking sessions and common browser framing issues.</p>
-              <ul>
-                <li>System code kept in private repositories.</li>
-                <li>Video walkthrough (when published).</li>
-                <li>Demo access on request, with a test account and no real user data.</li>
-                <li>Android APK available on request.</li>
-              </ul>
-            </div>
           </div>
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
@@ -131,17 +121,6 @@
                 <li>Digital pass uses a short-lived single-use <em>nonce</em>.</li>
                 <li>No full bank PAN or CVV stored (masked metadata / simulated gateway token), aligned with PCI DSS spirit and Dominican Law 172-13 on personal data.</li>
               </ul>
-
-              <div class="case-study-panel">
-                <h3>Demo script (3–5 min)</h3>
-                <ol>
-                  <li><strong>Problem:</strong> queues and manual top-ups.</li>
-                  <li><strong>App:</strong> login → balance → top-up → history → activate digital pass.</li>
-                  <li><strong>Admin:</strong> cards, lost-card request, ticket, and an audit entry.</li>
-                  <li><strong>Architecture:</strong> Android + WebSocket + Supabase + panel.</li>
-                  <li><strong>Close:</strong> prototype limits, controlled demo, next step (real payment gateway).</li>
-                </ol>
-              </div>
 
               <h2>Walkthrough video</h2>
               <div class="case-study-video mb-4" id="demo-video">
