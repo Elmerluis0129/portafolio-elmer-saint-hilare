@@ -3628,3 +3628,133 @@ body.scrolled .header .header-container {
   }
 }
 
+/*--------------------------------------------------------------
+# Case study Metro SDQ
+--------------------------------------------------------------*/
+.case-study-hero {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.case-study-hero .hero-kicker {
+  margin-bottom: 8px;
+}
+
+.case-study-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.case-study-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.case-study-panel {
+  background: color-mix(in srgb, var(--surface-color, #fff), var(--accent-color) 4%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+body.dark-mode .case-study-panel {
+  background: color-mix(in srgb, var(--surface-color, #111), var(--accent-color) 8%);
+}
+
+.case-study-panel h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.case-study-panel ol,
+.case-study-panel ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.case-study-panel li + li {
+  margin-top: 8px;
+}
+
+.case-study-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.case-study-shot {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px dashed color-mix(in srgb, var(--default-color), transparent 75%);
+  background: color-mix(in srgb, var(--surface-color, #fff), var(--default-color) 4%);
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
+}
+
+.case-study-shot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.case-study-shot.has-image {
+  border-style: solid;
+  padding: 0;
+  min-height: 0;
+}
+
+.case-study-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0f172a;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.case-study-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.case-study-video-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #cbd5e1;
+  padding: 24px;
+  text-align: center;
+}
+
+.case-study-video-placeholder i {
+  font-size: 2rem;
+}
+
+.work-card .case-cta {
+  margin-top: 16px;
+}
+
+.work-card .case-cta .btn {
+  width: 100%;
+}
+

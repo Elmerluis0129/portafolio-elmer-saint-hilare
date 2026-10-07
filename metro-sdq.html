@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Metro SDQ / M-Charging — Caso de estudio | Elmer Saint-Hilare</title>
+  <meta name="description" content="Caso de estudio de Metro SDQ (M-Charging): sistema de cobro y recarga con NFC, app Android, panel admin y backend en tiempo real. Tesis UNPHU, calificación A.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_DO">
+  <meta property="og:title" content="Metro SDQ / M-Charging — Caso de estudio">
+  <meta property="og:description" content="Sistema web y móvil de cobro y recarga con NFC para el Metro de Santo Domingo.">
+  <meta property="og:url" content="https://elmerluis0129.github.io/portafolio-elmer-saint-hilare/metro-sdq.html">
+  <meta property="og:image" content="https://elmerluis0129.github.io/portafolio-elmer-saint-hilare/assets/img/og-center.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Metro SDQ / M-Charging — Caso de estudio">
+  <meta name="twitter:description" content="Sistema web y móvil de cobro y recarga con NFC para el Metro de Santo Domingo.">
+  <meta name="twitter:image" content="https://elmerluis0129.github.io/portafolio-elmer-saint-hilare/assets/img/og-center.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="assets/img/favicon/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+  <meta name="theme-color" content="#1d4ed8">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center sticky-top" role="banner">
+    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0" aria-label="Ir a inicio">
+        <img src="assets/img/favicon/apple-icon-180x180.png" alt="" width="32" height="32">
+        <h1 class="sitename">Elmer Saint-Hilare</h1>
+      </a>
+      <nav id="navmenu" class="navmenu" role="navigation" aria-label="Menú principal">
+        <ul>
+          <li><a href="index.html#hero">Inicio</a></li>
+          <li><a href="index.html#about">Sobre mí</a></li>
+          <li><a href="index.html#work" class="active">Proyectos</a></li>
+          <li><a href="index.html#resume">Experiencia</a></li>
+          <li><a href="index.html#services">Servicios</a></li>
+          <li><a href="index.html#faq">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="metro-sdq-en.html" lang="en">EN</a></li>
+        </ul>
+        <button class="mobile-nav-toggle d-xl-none" aria-label="Alternar menú móvil" aria-expanded="false">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </nav>
+      <div class="header-social-links" role="navigation" aria-label="Redes sociales">
+        <a href="https://www.linkedin.com/in/elmer-sainthilare" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/18298517981" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elmerluis2901" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+      <button id="toggle-darkmode" class="btn btn-sm btn-dark mode-toggle-btn ms-3" aria-label="Cambiar modo oscuro o claro">
+        <i class="bi bi-moon" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="section case-study-hero">
+      <div class="container" data-aos="fade-up">
+        <p class="hero-kicker">Tesis · UNPHU · calificación A</p>
+        <h1 class="mb-3">Metro SDQ / M-Charging</h1>
+        <p class="lead mb-0" style="max-width: 46rem;">Sistema de cobro y recarga con NFC para el Metro y Teleférico de Santo Domingo: app Android, panel administrativo y backend en tiempo real.</p>
+        <div class="case-study-actions">
+          <a class="btn btn-primary" href="https://github.com/Elmerluis0129/metro-sdq-backend" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> Backend</a>
+          <a class="btn btn-outline" href="https://github.com/Elmerluis0129/metro-sdq-frontend" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> Frontend / admin</a>
+          <a class="btn btn-outline" href="contacto.html"><i class="bi bi-key" aria-hidden="true"></i> Pedir demo / credenciales</a>
+          <a class="btn btn-outline" href="index.html#work"><i class="bi bi-arrow-left" aria-hidden="true"></i> Volver a proyectos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-details section light-background">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="portfolio-info">
+              <h3>Ficha del proyecto</h3>
+              <ul>
+                <li><strong>Producto</strong> <span>M-Charging (Metro SDQ)</span></li>
+                <li><strong>Tipo</strong> <span>Tesis de grado · prototipo funcional</span></li>
+                <li><strong>Rol</strong> <span>Desarrollo full-stack (web, móvil, backend)</span></li>
+                <li><strong>Stack</strong> <span>Kotlin/Android, HTML/JS, Python WebSocket, Supabase, Railway, Vercel</span></li>
+                <li><strong>Hardware</strong> <span>Lector NFC (ACR122U) + tarjetas MIFARE</span></li>
+                <li><strong>Código</strong>
+                  <span>
+                    <a href="https://github.com/Elmerluis0129/metro-sdq-backend" target="_blank" rel="noopener noreferrer">metro-sdq-backend</a>
+                    ·
+                    <a href="https://github.com/Elmerluis0129/metro-sdq-frontend" target="_blank" rel="noopener noreferrer">metro-sdq-frontend</a>
+                  </span>
+                </li>
+              </ul>
+              <div class="skill-tags mt-3">
+                <span>NFC</span><span>WebSocket</span><span>Android</span><span>Supabase</span><span>Seguridad</span>
+              </div>
+            </div>
+
+            <div class="case-study-panel mt-4">
+              <h3>Demo segura</h3>
+              <p class="mb-3">No incrusto el panel admin en un iframe. Eso evita filtrar sesiones y problemas de seguridad en el navegador.</p>
+              <ul>
+                <li>Código abierto en GitHub.</li>
+                <li>Walkthrough en video (cuando esté publicado).</li>
+                <li>Acceso demo bajo solicitud, con cuenta de prueba y sin datos reales.</li>
+                <li>APK Android disponible bajo petición.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="portfolio-description">
+              <h2>El problema</h2>
+              <p>Recargar saldo del Metro implica filas, dependencia de taquilla y poca visibilidad del saldo o del historial. El objetivo fue diseñar un sistema móvil integrado con NFC, manteniendo compatibilidad con la infraestructura MIFARE existente.</p>
+
+              <h2>Qué construí</h2>
+              <ul>
+                <li><strong>App Android:</strong> login, saldo, recarga simulada, historial, métodos de pago enmascarados, pase digital con nonce de un solo uso, tickets y reportes de tarjeta perdida.</li>
+                <li><strong>Panel admin:</strong> inventario de tarjetas, solicitudes, tickets, configuración de tarifas y auditoría de acciones.</li>
+                <li><strong>Backend:</strong> API en tiempo real por WebSocket, persistencia en Supabase y sincronización entre app, panel y lector físico.</li>
+              </ul>
+
+              <h2>Arquitectura (resumen)</h2>
+              <p>Android y el panel web se conectan a un servidor WebSocket en Railway. El estado (usuarios, tarjetas, transacciones, notificaciones) vive en Supabase/PostgreSQL. El lector NFC en la estación reporta toques al backend, que cobra la tarifa y empuja el nuevo saldo a la app.</p>
+
+              <h2>Seguridad y datos</h2>
+              <ul>
+                <li>Contraseñas con hash; sesiones con token y caducidad por inactividad.</li>
+                <li>Biometría opcional en la app para proteger operaciones sensibles.</li>
+                <li>Pase digital con <em>nonce</em> de un solo uso (ventana corta) para evitar reutilización.</li>
+                <li>No se almacena el número completo ni el CVV de tarjetas bancarias (solo metadatos enmascarados / token simulado), alineado al espíritu de PCI DSS y a la Ley 172-13 sobre datos personales.</li>
+              </ul>
+
+              <div class="case-study-panel">
+                <h3>Guion de demo (3–5 min)</h3>
+                <ol>
+                  <li><strong>Problema:</strong> filas y recargas manuales.</li>
+                  <li><strong>App:</strong> login → saldo → recarga → historial → activar pase digital.</li>
+                  <li><strong>Admin:</strong> tarjetas, solicitud de pérdida, ticket y entrada en auditoría.</li>
+                  <li><strong>Arquitectura:</strong> Android + WebSocket + Supabase + panel.</li>
+                  <li><strong>Cierre:</strong> repositorios, limitaciones del prototipo y siguiente paso (pasarela real).</li>
+                </ol>
+              </div>
+
+              <h2>Video walkthrough</h2>
+              <div class="case-study-video mb-4" id="demo-video">
+                <!-- Sustituye el bloque placeholder por un iframe de YouTube/Vimeo cuando tengas el video. -->
+                <div class="case-study-video-placeholder">
+                  <i class="bi bi-play-circle" aria-hidden="true"></i>
+                  <strong>Video pendiente</strong>
+                  <span>Sube el walkthrough a YouTube (no listado) y pega el iframe aquí. Instrucciones en <code>DEMO_METRO_SDQ.md</code>.</span>
+                </div>
+              </div>
+
+              <h2>Capturas</h2>
+              <p class="mb-3">Espacio listo para capturas de la app y del panel. Coloca las imágenes en <code>assets/img/metro-sdq/</code>.</p>
+              <div class="case-study-gallery">
+                <div class="case-study-shot" data-shot="home">
+                  <i class="bi bi-phone mb-2" aria-hidden="true"></i>
+                  <span>Home / saldo</span>
+                </div>
+                <div class="case-study-shot" data-shot="recarga">
+                  <i class="bi bi-wallet2 mb-2" aria-hidden="true"></i>
+                  <span>Recarga</span>
+                </div>
+                <div class="case-study-shot" data-shot="pase">
+                  <i class="bi bi-nfc mb-2" aria-hidden="true"></i>
+                  <span>Pase digital</span>
+                </div>
+                <div class="case-study-shot" data-shot="admin">
+                  <i class="bi bi-pc-display mb-2" aria-hidden="true"></i>
+                  <span>Panel admin</span>
+                </div>
+              </div>
+
+              <div class="case-study-actions mt-4">
+                <a class="btn btn-primary" href="contacto.html">Solicitar acceso a la demo</a>
+                <a class="btn btn-outline" href="https://github.com/Elmerluis0129/metro-sdq-backend" target="_blank" rel="noopener noreferrer">Ver código backend</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© 2026 <strong class="px-1 sitename">Elmer Luis Saint-Hilare Rojo</strong></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/elmer-sainthilare" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/18298517981" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elmerluis2901" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
