@@ -6,17 +6,16 @@ Esta guía complementa las páginas `metro-sdq.html` (ES) y `metro-sdq-en.html` 
 
 - No hay iframe del panel admin (evita filtrar cookies/sesión y bloqueos `X-Frame-Options`).
 - No hay contraseñas ni `.env` en el HTML del portafolio.
-- El visitante ve el caso de estudio + GitHub; el acceso vivo se entrega bajo solicitud.
+- El visitante ve el caso de estudio; el acceso vivo y el código se entregan bajo solicitud.
+- Los repos de backend/frontend están **privados** (no se enlazan en el portafolio).
 
 ## Checklist antes de publicar
 
 1. Railway (backend) y Vercel (panel) desplegados y estables.
 2. Crear en Supabase/panel un usuario **demo** solo con datos de prueba (sin cédulas/correos reales).
 3. Preferible rol de usuario o admin de prueba con contraseña rotada; no uses tu cuenta personal.
-4. Confirmar que los repos públicos no incluyen `.env`, claves Firebase de producción sensibles ni dumps.
-5. Repos:
-   - https://github.com/Elmerluis0129/metro-sdq-backend
-   - https://github.com/Elmerluis0129/metro-sdq-frontend
+4. Mantener backend/frontend en GitHub como privados mientras evalúas comercialización.
+5. No publicar URLs de admin, APK ni credenciales en el HTML público.
 
 ## Cómo integrar el video
 
@@ -80,4 +79,4 @@ Luego abre:
 3. Admin: tarjetas, pérdida, auditoría.
 4. Arquitectura: Android + WebSocket + Supabase.
 5. Seguridad: hash, sesión, sin PAN/CVV, Ley 172-13.
-6. Código en GitHub + oferta de demo controlada.
+6. Oferta de demo controlada (código y APK bajo solicitud).
